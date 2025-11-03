@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="208pt" height="501pt" viewBox="0.00 0.00 208.00 501.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 496.8)">
+<title>AdminFlow</title>
+<polygon fill="#ffffff" stroke="none" points="-4,4 -4,-496.8 204.36,-496.8 204.36,4 -4,4"/>
+<text xml:space="preserve" text-anchor="middle" x="100.18" y="-476.2" font-family="Helvetica,sans-Serif" font-size="14.00">HireWrite — Admin User Flow</text>
+<!-- Start -->
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#fb9a99" stroke="black" d="M128.89,-468C128.89,-468 71.47,-468 71.47,-468 65.47,-468 59.47,-462 59.47,-456 59.47,-456 59.47,-444 59.47,-444 59.47,-438 65.47,-432 71.47,-432 71.47,-432 128.89,-432 128.89,-432 134.89,-432 140.89,-438 140.89,-444 140.89,-444 140.89,-456 140.89,-456 140.89,-462 134.89,-468 128.89,-468"/>
+<text xml:space="preserve" text-anchor="middle" x="100.18" y="-446.7" font-family="Helvetica,sans-Serif" font-size="11.00">Start → Login</text>
+</g>
+<!-- ManageUsers -->
+<g id="node2" class="node">
+<title>ManageUsers</title>
+<path fill="#fb9a99" stroke="black" d="M179.93,-396C179.93,-396 20.43,-396 20.43,-396 14.43,-396 8.43,-390 8.43,-384 8.43,-384 8.43,-372 8.43,-372 8.43,-366 14.43,-360 20.43,-360 20.43,-360 179.93,-360 179.93,-360 185.93,-360 191.93,-366 191.93,-372 191.93,-372 191.93,-384 191.93,-384 191.93,-390 185.93,-396 179.93,-396"/>
+<text xml:space="preserve" text-anchor="middle" x="100.18" y="-381.3" font-family="Helvetica,sans-Serif" font-size="11.00">Manage Users</text>
+<text xml:space="preserve" text-anchor="middle" x="100.18" y="-368.1" font-family="Helvetica,sans-Serif" font-size="11.00">(Students, Recruiters, Employees)</text>
+</g>
+<!-- Start&#45;&gt;ManageUsers -->
+<g id="edge1" class="edge">
+<title>Start-&gt;ManageUsers</title>
+<path fill="none" stroke="black" d="M100.18,-431.7C100.18,-424.41 100.18,-415.73 100.18,-407.54"/>
+<polygon fill="black" stroke="black" points="103.68,-407.62 100.18,-397.62 96.68,-407.62 103.68,-407.62"/>
+</g>
+<!-- MonitorJobs -->
+<g id="node3" class="node">
+<title>MonitorJobs</title>
+<path fill="#fb9a99" stroke="black" d="M147.54,-324C147.54,-324 52.82,-324 52.82,-324 46.82,-324 40.82,-318 40.82,-312 40.82,-312 40.82,-300 40.82,-300 40.82,-294 46.82,-288 52.82,-288 52.82,-288 147.54,-288 147.54,-288 153.54,-288 159.54,-294 159.54,-300 159.54,-300 159.54,-312 159.54,-312 159.54,-318 153.54,-324 147.54,-324"/>
+<text xml:space="preserve" text-anchor="middle" x="100.18" y="-309.3" font-family="Helvetica,sans-Serif" font-size="11.00">Monitor Job Postings</text>
+<text xml:space="preserve" text-anchor="middle" x="100.18" y="-296.1" font-family="Helvetica,sans-Serif" font-size="11.00">(Approve/Reject JD)</text>
+</g>
+<!-- ManageUsers&#45;&gt;MonitorJobs -->
+<g id="edge2" class="edge">
+<title>ManageUsers-&gt;MonitorJobs</title>
+<path fill="none" stroke="black" d="M100.18,-359.7C100.18,-352.41 100.18,-343.73 100.18,-335.54"/>
+<polygon fill="black" stroke="black" points="103.68,-335.62 100.18,-325.62 96.68,-335.62 103.68,-335.62"/>
+</g>
+<!-- TrackApps -->
+<g id="node4" class="node">
+<title>TrackApps</title>
+<path fill="#fb9a99" stroke="black" d="M166.34,-252C166.34,-252 34.02,-252 34.02,-252 28.02,-252 22.02,-246 22.02,-240 22.02,-240 22.02,-228 22.02,-228 22.02,-222 28.02,-216 34.02,-216 34.02,-216 166.34,-216 166.34,-216 172.34,-216 178.34,-222 178.34,-228 178.34,-228 178.34,-240 178.34,-240 178.34,-246 172.34,-252 166.34,-252"/>
+<text xml:space="preserve" text-anchor="middle" x="100.18" y="-237.3" font-family="Helvetica,sans-Serif" font-size="11.00">Track Applications</text>
+<text xml:space="preserve" text-anchor="middle" x="100.18" y="-224.1" font-family="Helvetica,sans-Serif" font-size="11.00">(Internal + External Sources)</text>
+</g>
+<!-- MonitorJobs&#45;&gt;TrackApps -->
+<g id="edge3" class="edge">
+<title>MonitorJobs-&gt;TrackApps</title>
+<path fill="none" stroke="black" d="M100.18,-287.7C100.18,-280.41 100.18,-271.73 100.18,-263.54"/>
+<polygon fill="black" stroke="black" points="103.68,-263.62 100.18,-253.62 96.68,-263.62 103.68,-263.62"/>
+</g>
+<!-- Analytics -->
+<g id="node5" class="node">
+<title>Analytics</title>
+<path fill="#fb9a99" stroke="black" d="M180.24,-180C180.24,-180 20.11,-180 20.11,-180 14.11,-180 8.11,-174 8.11,-168 8.11,-168 8.11,-156 8.11,-156 8.11,-150 14.11,-144 20.11,-144 20.11,-144 180.24,-144 180.24,-144 186.24,-144 192.24,-150 192.24,-156 192.24,-156 192.24,-168 192.24,-168 192.24,-174 186.24,-180 180.24,-180"/>
+<text xml:space="preserve" text-anchor="middle" x="100.18" y="-165.3" font-family="Helvetica,sans-Serif" font-size="11.00">System Analytics &amp; Reports</text>
+<text xml:space="preserve" text-anchor="middle" x="100.18" y="-152.1" font-family="Helvetica,sans-Serif" font-size="11.00">(Usage, Source, Conversion Rate)</text>
+</g>
+<!-- TrackApps&#45;&gt;Analytics -->
+<g id="edge4" class="edge">
+<title>TrackApps-&gt;Analytics</title>
+<path fill="none" stroke="black" d="M100.18,-215.7C100.18,-208.41 100.18,-199.73 100.18,-191.54"/>
+<polygon fill="black" stroke="black" points="103.68,-191.62 100.18,-181.62 96.68,-191.62 103.68,-191.62"/>
+</g>
+<!-- Settings -->
+<g id="node6" class="node">
+<title>Settings</title>
+<path fill="#fb9a99" stroke="black" d="M151.51,-108C151.51,-108 48.85,-108 48.85,-108 42.85,-108 36.85,-102 36.85,-96 36.85,-96 36.85,-84 36.85,-84 36.85,-78 42.85,-72 48.85,-72 48.85,-72 151.51,-72 151.51,-72 157.51,-72 163.51,-78 163.51,-84 163.51,-84 163.51,-96 163.51,-96 163.51,-102 157.51,-108 151.51,-108"/>
+<text xml:space="preserve" text-anchor="middle" x="100.18" y="-93.3" font-family="Helvetica,sans-Serif" font-size="11.00">System Configurations</text>
+<text xml:space="preserve" text-anchor="middle" x="100.18" y="-80.1" font-family="Helvetica,sans-Serif" font-size="11.00">&amp; Access Controls</text>
+</g>
+<!-- Analytics&#45;&gt;Settings -->
+<g id="edge5" class="edge">
+<title>Analytics-&gt;Settings</title>
+<path fill="none" stroke="black" d="M100.18,-143.7C100.18,-136.41 100.18,-127.73 100.18,-119.54"/>
+<polygon fill="black" stroke="black" points="103.68,-119.62 100.18,-109.62 96.68,-119.62 103.68,-119.62"/>
+</g>
+<!-- End -->
+<g id="node7" class="node">
+<title>End</title>
+<path fill="#fb9a99" stroke="black" d="M157.63,-36C157.63,-36 42.73,-36 42.73,-36 36.73,-36 30.73,-30 30.73,-24 30.73,-24 30.73,-12 30.73,-12 30.73,-6 36.73,0 42.73,0 42.73,0 157.63,0 157.63,0 163.63,0 169.63,-6 169.63,-12 169.63,-12 169.63,-24 169.63,-24 169.63,-30 163.63,-36 157.63,-36"/>
+<text xml:space="preserve" text-anchor="middle" x="100.18" y="-14.7" font-family="Helvetica,sans-Serif" font-size="11.00">End → Admin Dashboard</text>
+</g>
+<!-- Settings&#45;&gt;End -->
+<g id="edge6" class="edge">
+<title>Settings-&gt;End</title>
+<path fill="none" stroke="black" d="M100.18,-71.7C100.18,-64.41 100.18,-55.73 100.18,-47.54"/>
+<polygon fill="black" stroke="black" points="103.68,-47.62 100.18,-37.62 96.68,-47.62 103.68,-47.62"/>
+</g>
+</g>
+</svg>

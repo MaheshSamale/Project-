@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1195pt" height="405pt" viewBox="0.00 0.00 1195.00 405.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 400.84)">
+<title>HireWrite_ER_Final</title>
+<polygon fill="#f4f4f4" stroke="none" points="-4,4 -4,-400.84 1190.52,-400.84 1190.52,4 -4,4"/>
+<text xml:space="preserve" text-anchor="middle" x="593.26" y="-380.24" font-family="Helvetica,sans-Serif" font-size="14.00">HireWrite — Final ER Diagram with Source Tracking</text>
+<!-- Users -->
+<g id="node1" class="node">
+<title>Users</title>
+<path fill="#a6cee3" stroke="black" d="M12,-177.5C12,-177.5 102.53,-177.5 102.53,-177.5 108.53,-177.5 114.53,-183.5 114.53,-189.5 114.53,-189.5 114.53,-226.3 114.53,-226.3 114.53,-232.3 108.53,-238.3 102.53,-238.3 102.53,-238.3 12,-238.3 12,-238.3 6,-238.3 0,-232.3 0,-226.3 0,-226.3 0,-189.5 0,-189.5 0,-183.5 6,-177.5 12,-177.5"/>
+<text xml:space="preserve" text-anchor="middle" x="22.36" y="-204.6" font-family="Helvetica,sans-Serif" font-size="11.00">Users</text>
+<polyline fill="none" stroke="black" points="44.72,-177.5 44.72,-238.3"/>
+<text xml:space="preserve" text-anchor="start" x="52.72" y="-224.4" font-family="Helvetica,sans-Serif" font-size="11.00">user_id PK</text>
+<text xml:space="preserve" text-anchor="start" x="52.72" y="-211.2" font-family="Helvetica,sans-Serif" font-size="11.00">email</text>
+<text xml:space="preserve" text-anchor="start" x="52.72" y="-198" font-family="Helvetica,sans-Serif" font-size="11.00">password</text>
+<text xml:space="preserve" text-anchor="start" x="52.72" y="-184.8" font-family="Helvetica,sans-Serif" font-size="11.00">role</text>
+</g>
+<!-- Students -->
+<g id="node2" class="node">
+<title>Students</title>
+<path fill="#b2df8a" stroke="black" d="M356.41,-295.9C356.41,-295.9 476.32,-295.9 476.32,-295.9 482.32,-295.9 488.32,-301.9 488.32,-307.9 488.32,-307.9 488.32,-357.9 488.32,-357.9 488.32,-363.9 482.32,-369.9 476.32,-369.9 476.32,-369.9 356.41,-369.9 356.41,-369.9 350.41,-369.9 344.41,-363.9 344.41,-357.9 344.41,-357.9 344.41,-307.9 344.41,-307.9 344.41,-301.9 350.41,-295.9 356.41,-295.9"/>
+<text xml:space="preserve" text-anchor="middle" x="374.12" y="-329.6" font-family="Helvetica,sans-Serif" font-size="11.00">Students</text>
+<polyline fill="none" stroke="black" points="403.83,-295.9 403.83,-369.9"/>
+<text xml:space="preserve" text-anchor="start" x="411.83" y="-356" font-family="Helvetica,sans-Serif" font-size="11.00">student_id PK</text>
+<text xml:space="preserve" text-anchor="start" x="411.83" y="-342.8" font-family="Helvetica,sans-Serif" font-size="11.00">user_id FK</text>
+<text xml:space="preserve" text-anchor="start" x="411.83" y="-329.6" font-family="Helvetica,sans-Serif" font-size="11.00">name</text>
+<text xml:space="preserve" text-anchor="start" x="411.83" y="-316.4" font-family="Helvetica,sans-Serif" font-size="11.00">skills</text>
+<text xml:space="preserve" text-anchor="start" x="411.83" y="-303.2" font-family="Helvetica,sans-Serif" font-size="11.00">education</text>
+</g>
+<!-- Users&#45;&gt;Students -->
+<g id="edge1" class="edge">
+<title>Users-&gt;Students</title>
+<path fill="none" stroke="#33a02c" d="M101.44,-238.73C121.88,-252.11 147.11,-266.96 171.53,-276.9 223.3,-297.97 284.64,-312 332.84,-320.76"/>
+<polygon fill="#33a02c" stroke="#33a02c" points="332.22,-324.2 342.68,-322.5 333.44,-317.31 332.22,-324.2"/>
+<text xml:space="preserve" text-anchor="middle" x="143.03" y="-272.63" font-family="Times,serif" font-size="14.00">1:1</text>
+</g>
+<!-- Recruiters -->
+<g id="node3" class="node">
+<title>Recruiters</title>
+<path fill="#fdbf6f" stroke="black" d="M183.53,-206.5C183.53,-206.5 314.41,-206.5 314.41,-206.5 320.41,-206.5 326.41,-212.5 326.41,-218.5 326.41,-218.5 326.41,-255.3 326.41,-255.3 326.41,-261.3 320.41,-267.3 314.41,-267.3 314.41,-267.3 183.53,-267.3 183.53,-267.3 177.53,-267.3 171.53,-261.3 171.53,-255.3 171.53,-255.3 171.53,-218.5 171.53,-218.5 171.53,-212.5 177.53,-206.5 183.53,-206.5"/>
+<text xml:space="preserve" text-anchor="middle" x="204.59" y="-233.6" font-family="Helvetica,sans-Serif" font-size="11.00">Recruiters</text>
+<polyline fill="none" stroke="black" points="237.66,-206.5 237.66,-267.3"/>
+<text xml:space="preserve" text-anchor="start" x="245.66" y="-253.4" font-family="Helvetica,sans-Serif" font-size="11.00">recruiter_id PK</text>
+<text xml:space="preserve" text-anchor="start" x="245.66" y="-240.2" font-family="Helvetica,sans-Serif" font-size="11.00">user_id FK</text>
+<text xml:space="preserve" text-anchor="start" x="245.66" y="-227" font-family="Helvetica,sans-Serif" font-size="11.00">name</text>
+<text xml:space="preserve" text-anchor="start" x="245.66" y="-213.8" font-family="Helvetica,sans-Serif" font-size="11.00">position</text>
+</g>
+<!-- Users&#45;&gt;Recruiters -->
+<g id="edge2" class="edge">
+<title>Users-&gt;Recruiters</title>
+<path fill="none" stroke="#ff7f00" d="M114.93,-216.56C129.16,-218.74 144.77,-221.12 160.13,-223.47"/>
+<polygon fill="#ff7f00" stroke="#ff7f00" points="159.34,-226.89 169.75,-224.94 160.4,-219.97 159.34,-226.89"/>
+<text xml:space="preserve" text-anchor="middle" x="143.03" y="-226.6" font-family="Times,serif" font-size="14.00">1:1</text>
+</g>
+<!-- Admins -->
+<g id="node4" class="node">
+<title>Admins</title>
+<path fill="#fb9a99" stroke="black" d="M195.45,-140.1C195.45,-140.1 302.49,-140.1 302.49,-140.1 308.49,-140.1 314.49,-146.1 314.49,-152.1 314.49,-152.1 314.49,-175.7 314.49,-175.7 314.49,-181.7 308.49,-187.7 302.49,-187.7 302.49,-187.7 195.45,-187.7 195.45,-187.7 189.45,-187.7 183.45,-181.7 183.45,-175.7 183.45,-175.7 183.45,-152.1 183.45,-152.1 183.45,-146.1 189.45,-140.1 195.45,-140.1"/>
+<text xml:space="preserve" text-anchor="middle" x="209.78" y="-160.6" font-family="Helvetica,sans-Serif" font-size="11.00">Admins</text>
+<polyline fill="none" stroke="black" points="236.12,-140.1 236.12,-187.7"/>
+<text xml:space="preserve" text-anchor="start" x="244.12" y="-173.8" font-family="Helvetica,sans-Serif" font-size="11.00">admin_id PK</text>
+<text xml:space="preserve" text-anchor="start" x="244.12" y="-160.6" font-family="Helvetica,sans-Serif" font-size="11.00">user_id FK</text>
+<text xml:space="preserve" text-anchor="start" x="244.12" y="-147.4" font-family="Helvetica,sans-Serif" font-size="11.00">name</text>
+</g>
+<!-- Users&#45;&gt;Admins -->
+<g id="edge3" class="edge">
+<title>Users-&gt;Admins</title>
+<path fill="none" stroke="#e31a1c" d="M114.93,-194.76C132.91,-190.59 153.08,-185.91 172.18,-181.48"/>
+<polygon fill="#e31a1c" stroke="#e31a1c" points="172.86,-184.91 181.81,-179.25 171.28,-178.1 172.86,-184.91"/>
+<text xml:space="preserve" text-anchor="middle" x="143.03" y="-194.04" font-family="Times,serif" font-size="14.00">1:1</text>
+</g>
+<!-- AIResults -->
+<g id="node10" class="node">
+<title>AIResults</title>
+<path fill="#6a3d9a" stroke="black" d="M191.78,-34.3C191.78,-34.3 306.16,-34.3 306.16,-34.3 312.16,-34.3 318.16,-40.3 318.16,-46.3 318.16,-46.3 318.16,-109.5 318.16,-109.5 318.16,-115.5 312.16,-121.5 306.16,-121.5 306.16,-121.5 191.78,-121.5 191.78,-121.5 185.78,-121.5 179.78,-115.5 179.78,-109.5 179.78,-109.5 179.78,-46.3 179.78,-46.3 179.78,-40.3 185.78,-34.3 191.78,-34.3"/>
+<text xml:space="preserve" text-anchor="middle" x="211.32" y="-74.6" font-family="Helvetica,sans-Serif" font-size="11.00">AIResults</text>
+<polyline fill="none" stroke="black" points="242.85,-34.3 242.85,-121.5"/>
+<text xml:space="preserve" text-anchor="start" x="250.85" y="-107.6" font-family="Helvetica,sans-Serif" font-size="11.00">result_id PK</text>
+<text xml:space="preserve" text-anchor="start" x="250.85" y="-94.4" font-family="Helvetica,sans-Serif" font-size="11.00">user_id FK</text>
+<text xml:space="preserve" text-anchor="start" x="250.85" y="-81.2" font-family="Helvetica,sans-Serif" font-size="11.00">type</text>
+<text xml:space="preserve" text-anchor="start" x="250.85" y="-68" font-family="Helvetica,sans-Serif" font-size="11.00">input_text</text>
+<text xml:space="preserve" text-anchor="start" x="250.85" y="-54.8" font-family="Helvetica,sans-Serif" font-size="11.00">output_text</text>
+<text xml:space="preserve" text-anchor="start" x="250.85" y="-41.6" font-family="Helvetica,sans-Serif" font-size="11.00">score</text>
+</g>
+<!-- Users&#45;&gt;AIResults -->
+<g id="edge11" class="edge">
+<title>Users-&gt;AIResults</title>
+<path fill="none" stroke="#6a3d9a" d="M103.22,-177.09C124.5,-162.51 150.47,-144.72 174.5,-128.25"/>
+<polygon fill="#6a3d9a" stroke="#6a3d9a" points="176.43,-131.17 182.7,-122.63 172.48,-125.39 176.43,-131.17"/>
+<text xml:space="preserve" text-anchor="middle" x="143.03" y="-158.74" font-family="Times,serif" font-size="14.00">1:N</text>
+</g>
+<!-- Applications -->
+<g id="node8" class="node">
+<title>Applications</title>
+<path fill="#e31a1c" stroke="black" d="M967.2,-136.5C967.2,-136.5 1174.52,-136.5 1174.52,-136.5 1180.52,-136.5 1186.52,-142.5 1186.52,-148.5 1186.52,-148.5 1186.52,-251.3 1186.52,-251.3 1186.52,-257.3 1180.52,-263.3 1174.52,-263.3 1174.52,-263.3 967.2,-263.3 967.2,-263.3 961.2,-263.3 955.2,-257.3 955.2,-251.3 955.2,-251.3 955.2,-148.5 955.2,-148.5 955.2,-142.5 961.2,-136.5 967.2,-136.5"/>
+<text xml:space="preserve" text-anchor="middle" x="992.86" y="-196.6" font-family="Helvetica,sans-Serif" font-size="11.00">Applications</text>
+<polyline fill="none" stroke="black" points="1030.51,-136.5 1030.51,-263.3"/>
+<text xml:space="preserve" text-anchor="start" x="1038.51" y="-249.4" font-family="Helvetica,sans-Serif" font-size="11.00">application_id PK</text>
+<text xml:space="preserve" text-anchor="start" x="1038.51" y="-236.2" font-family="Helvetica,sans-Serif" font-size="11.00">student_id FK</text>
+<text xml:space="preserve" text-anchor="start" x="1038.51" y="-223" font-family="Helvetica,sans-Serif" font-size="11.00">internal_job_id FK</text>
+<text xml:space="preserve" text-anchor="start" x="1038.51" y="-209.8" font-family="Helvetica,sans-Serif" font-size="11.00">external_job_id FK</text>
+<text xml:space="preserve" text-anchor="start" x="1038.51" y="-196.6" font-family="Helvetica,sans-Serif" font-size="11.00">resume_id FK</text>
+<text xml:space="preserve" text-anchor="start" x="1038.51" y="-183.4" font-family="Helvetica,sans-Serif" font-size="11.00">status</text>
+<text xml:space="preserve" text-anchor="start" x="1038.51" y="-170.2" font-family="Helvetica,sans-Serif" font-size="11.00">applied_at</text>
+<text xml:space="preserve" text-anchor="start" x="1038.51" y="-157" font-family="Helvetica,sans-Serif" font-size="11.00">job_type</text>
+<text xml:space="preserve" text-anchor="start" x="1038.51" y="-143.8" font-family="Helvetica,sans-Serif" font-size="11.00">source (App/Web/Extension)</text>
+</g>
+<!-- Students&#45;&gt;Applications -->
+<g id="edge7" class="edge">
+<title>Students-&gt;Applications</title>
+<path fill="none" stroke="#e31a1c" d="M488.44,-344.23C584.28,-356.66 758.96,-369.24 898.2,-322.9 931.94,-311.67 964.76,-291.29 992.51,-270.31"/>
+<polygon fill="#e31a1c" stroke="#e31a1c" points="994.37,-273.3 1000.14,-264.41 990.09,-267.76 994.37,-273.3"/>
+<text xml:space="preserve" text-anchor="middle" x="699.5" y="-359.44" font-family="Times,serif" font-size="14.00">1:N</text>
+</g>
+<!-- Companies -->
+<g id="node5" class="node">
+<title>Companies</title>
+<path fill="#ff7f00" stroke="black" d="M518.32,-252.5C518.32,-252.5 659,-252.5 659,-252.5 665,-252.5 671,-258.5 671,-264.5 671,-264.5 671,-301.3 671,-301.3 671,-307.3 665,-313.3 659,-313.3 659,-313.3 518.32,-313.3 518.32,-313.3 512.32,-313.3 506.32,-307.3 506.32,-301.3 506.32,-301.3 506.32,-264.5 506.32,-264.5 506.32,-258.5 512.32,-252.5 518.32,-252.5"/>
+<text xml:space="preserve" text-anchor="middle" x="542.14" y="-279.6" font-family="Helvetica,sans-Serif" font-size="11.00">Companies</text>
+<polyline fill="none" stroke="black" points="577.96,-252.5 577.96,-313.3"/>
+<text xml:space="preserve" text-anchor="start" x="585.96" y="-299.4" font-family="Helvetica,sans-Serif" font-size="11.00">company_id PK</text>
+<text xml:space="preserve" text-anchor="start" x="585.96" y="-286.2" font-family="Helvetica,sans-Serif" font-size="11.00">name</text>
+<text xml:space="preserve" text-anchor="start" x="585.96" y="-273" font-family="Helvetica,sans-Serif" font-size="11.00">website</text>
+<text xml:space="preserve" text-anchor="start" x="585.96" y="-259.8" font-family="Helvetica,sans-Serif" font-size="11.00">status</text>
+</g>
+<!-- Recruiters&#45;&gt;Companies -->
+<g id="edge4" class="edge">
+<title>Recruiters-&gt;Companies</title>
+<path fill="none" stroke="#ff7f00" d="M326.6,-247.34C376.56,-254.14 442.06,-263.07 494.95,-270.27"/>
+<polygon fill="#ff7f00" stroke="#ff7f00" points="494.15,-273.69 504.53,-271.58 495.1,-266.76 494.15,-273.69"/>
+<text xml:space="preserve" text-anchor="middle" x="416.36" y="-273.51" font-family="Times,serif" font-size="14.00">1:N</text>
+</g>
+<!-- InternalJobs -->
+<g id="node6" class="node">
+<title>InternalJobs</title>
+<path fill="#cab2d6" stroke="black" d="M740.92,-212.7C740.92,-212.7 885.28,-212.7 885.28,-212.7 891.28,-212.7 897.28,-218.7 897.28,-224.7 897.28,-224.7 897.28,-301.1 897.28,-301.1 897.28,-307.1 891.28,-313.1 885.28,-313.1 885.28,-313.1 740.92,-313.1 740.92,-313.1 734.92,-313.1 728.92,-307.1 728.92,-301.1 728.92,-301.1 728.92,-224.7 728.92,-224.7 728.92,-218.7 734.92,-212.7 740.92,-212.7"/>
+<text xml:space="preserve" text-anchor="middle" x="766.89" y="-259.6" font-family="Helvetica,sans-Serif" font-size="11.00">InternalJobs</text>
+<polyline fill="none" stroke="black" points="804.85,-212.7 804.85,-313.1"/>
+<text xml:space="preserve" text-anchor="start" x="812.85" y="-299.2" font-family="Helvetica,sans-Serif" font-size="11.00">job_id PK</text>
+<text xml:space="preserve" text-anchor="start" x="812.85" y="-286" font-family="Helvetica,sans-Serif" font-size="11.00">company_id FK</text>
+<text xml:space="preserve" text-anchor="start" x="812.85" y="-272.8" font-family="Helvetica,sans-Serif" font-size="11.00">recruiter_id FK</text>
+<text xml:space="preserve" text-anchor="start" x="812.85" y="-259.6" font-family="Helvetica,sans-Serif" font-size="11.00">title</text>
+<text xml:space="preserve" text-anchor="start" x="812.85" y="-246.4" font-family="Helvetica,sans-Serif" font-size="11.00">description</text>
+<text xml:space="preserve" text-anchor="start" x="812.85" y="-233.2" font-family="Helvetica,sans-Serif" font-size="11.00">location</text>
+<text xml:space="preserve" text-anchor="start" x="812.85" y="-220" font-family="Helvetica,sans-Serif" font-size="11.00">posted_date</text>
+</g>
+<!-- Recruiters&#45;&gt;InternalJobs -->
+<g id="edge6" class="edge">
+<title>Recruiters-&gt;InternalJobs</title>
+<path fill="none" stroke="#cab2d6" d="M326.77,-227.92C411.44,-219.65 551.51,-210.77 671,-226.1 686.16,-228.04 702.01,-231.12 717.38,-234.68"/>
+<polygon fill="#cab2d6" stroke="#cab2d6" points="716.47,-238.06 727.01,-236.99 718.1,-231.25 716.47,-238.06"/>
+<text xml:space="preserve" text-anchor="middle" x="588.66" y="-230.3" font-family="Times,serif" font-size="14.00">1:N</text>
+</g>
+<!-- AdminActions -->
+<g id="node11" class="node">
+<title>AdminActions</title>
+<path fill="#1f78b4" stroke="black" d="M520.15,-93.3C520.15,-93.3 657.17,-93.3 657.17,-93.3 663.17,-93.3 669.17,-99.3 669.17,-105.3 669.17,-105.3 669.17,-168.5 669.17,-168.5 669.17,-174.5 663.17,-180.5 657.17,-180.5 657.17,-180.5 520.15,-180.5 520.15,-180.5 514.15,-180.5 508.15,-174.5 508.15,-168.5 508.15,-168.5 508.15,-105.3 508.15,-105.3 508.15,-99.3 514.15,-93.3 520.15,-93.3"/>
+<text xml:space="preserve" text-anchor="middle" x="549.78" y="-133.6" font-family="Helvetica,sans-Serif" font-size="11.00">AdminActions</text>
+<polyline fill="none" stroke="black" points="591.4,-93.3 591.4,-180.5"/>
+<text xml:space="preserve" text-anchor="start" x="599.4" y="-166.6" font-family="Helvetica,sans-Serif" font-size="11.00">action_id PK</text>
+<text xml:space="preserve" text-anchor="start" x="599.4" y="-153.4" font-family="Helvetica,sans-Serif" font-size="11.00">admin_id FK</text>
+<text xml:space="preserve" text-anchor="start" x="599.4" y="-140.2" font-family="Helvetica,sans-Serif" font-size="11.00">target_type</text>
+<text xml:space="preserve" text-anchor="start" x="599.4" y="-127" font-family="Helvetica,sans-Serif" font-size="11.00">target_id</text>
+<text xml:space="preserve" text-anchor="start" x="599.4" y="-113.8" font-family="Helvetica,sans-Serif" font-size="11.00">action</text>
+<text xml:space="preserve" text-anchor="start" x="599.4" y="-100.6" font-family="Helvetica,sans-Serif" font-size="11.00">created_at</text>
+</g>
+<!-- Admins&#45;&gt;AdminActions -->
+<g id="edge12" class="edge">
+<title>Admins-&gt;AdminActions</title>
+<path fill="none" stroke="#1f78b4" d="M314.68,-158.73C366.21,-154.61 438.97,-148.79 496.41,-144.2"/>
+<polygon fill="#1f78b4" stroke="#1f78b4" points="496.49,-147.7 506.18,-143.42 495.93,-140.72 496.49,-147.7"/>
+<text xml:space="preserve" text-anchor="middle" x="416.36" y="-160.12" font-family="Times,serif" font-size="14.00">1:N</text>
+</g>
+<!-- Companies&#45;&gt;InternalJobs -->
+<g id="edge5" class="edge">
+<title>Companies-&gt;InternalJobs</title>
+<path fill="none" stroke="#cab2d6" d="M671.23,-275.57C686.29,-274.21 702.14,-272.79 717.55,-271.4"/>
+<polygon fill="#cab2d6" stroke="#cab2d6" points="717.53,-274.92 727.17,-270.54 716.9,-267.95 717.53,-274.92"/>
+<text xml:space="preserve" text-anchor="middle" x="699.5" y="-277.7" font-family="Times,serif" font-size="14.00">1:N</text>
+</g>
+<!-- InternalJobs&#45;&gt;Applications -->
+<g id="edge8" class="edge">
+<title>InternalJobs-&gt;Applications</title>
+<path fill="none" stroke="#cab2d6" d="M897.49,-242.36C912.42,-238.68 928.26,-234.78 944.07,-230.89"/>
+<polygon fill="#cab2d6" stroke="#cab2d6" points="944.65,-234.35 953.52,-228.56 942.97,-227.55 944.65,-234.35"/>
+<text xml:space="preserve" text-anchor="middle" x="926.7" y="-241.24" font-family="Times,serif" font-size="14.00">1:N</text>
+</g>
+<!-- ExternalJobs -->
+<g id="node7" class="node">
+<title>ExternalJobs</title>
+<path fill="#fdbf6f" stroke="black" d="M740,-80.1C740,-80.1 886.2,-80.1 886.2,-80.1 892.2,-80.1 898.2,-86.1 898.2,-92.1 898.2,-92.1 898.2,-181.7 898.2,-181.7 898.2,-187.7 892.2,-193.7 886.2,-193.7 886.2,-193.7 740,-193.7 740,-193.7 734,-193.7 728,-187.7 728,-181.7 728,-181.7 728,-92.1 728,-92.1 728,-86.1 734,-80.1 740,-80.1"/>
+<text xml:space="preserve" text-anchor="middle" x="767.8" y="-133.6" font-family="Helvetica,sans-Serif" font-size="11.00">ExternalJobs</text>
+<polyline fill="none" stroke="black" points="807.59,-80.1 807.59,-193.7"/>
+<text xml:space="preserve" text-anchor="start" x="815.59" y="-179.8" font-family="Helvetica,sans-Serif" font-size="11.00">job_id PK</text>
+<text xml:space="preserve" text-anchor="start" x="815.59" y="-166.6" font-family="Helvetica,sans-Serif" font-size="11.00">source_name</text>
+<text xml:space="preserve" text-anchor="start" x="815.59" y="-153.4" font-family="Helvetica,sans-Serif" font-size="11.00">external_job_id</text>
+<text xml:space="preserve" text-anchor="start" x="815.59" y="-140.2" font-family="Helvetica,sans-Serif" font-size="11.00">title</text>
+<text xml:space="preserve" text-anchor="start" x="815.59" y="-127" font-family="Helvetica,sans-Serif" font-size="11.00">description</text>
+<text xml:space="preserve" text-anchor="start" x="815.59" y="-113.8" font-family="Helvetica,sans-Serif" font-size="11.00">location</text>
+<text xml:space="preserve" text-anchor="middle" x="852.89" y="-100.6" font-family="Helvetica,sans-Serif" font-size="11.00">posted_date</text>
+<text xml:space="preserve" text-anchor="start" x="815.59" y="-87.4" font-family="Helvetica,sans-Serif" font-size="11.00">apply_link</text>
+</g>
+<!-- ExternalJobs&#45;&gt;Applications -->
+<g id="edge9" class="edge">
+<title>ExternalJobs-&gt;Applications</title>
+<path fill="none" stroke="#fdbf6f" d="M898.55,-157.7C913.07,-161.28 928.44,-165.06 943.77,-168.84"/>
+<polygon fill="#fdbf6f" stroke="#fdbf6f" points="942.9,-172.23 953.45,-171.22 944.57,-165.43 942.9,-172.23"/>
+<text xml:space="preserve" text-anchor="middle" x="926.7" y="-170.71" font-family="Times,serif" font-size="14.00">1:N</text>
+</g>
+<!-- Resumes -->
+<g id="node9" class="node">
+<title>Resumes</title>
+<path fill="#33a02c" stroke="black" d="M751.33,-0.5C751.33,-0.5 874.87,-0.5 874.87,-0.5 880.87,-0.5 886.87,-6.5 886.87,-12.5 886.87,-12.5 886.87,-49.3 886.87,-49.3 886.87,-55.3 880.87,-61.3 874.87,-61.3 874.87,-61.3 751.33,-61.3 751.33,-61.3 745.33,-61.3 739.33,-55.3 739.33,-49.3 739.33,-49.3 739.33,-12.5 739.33,-12.5 739.33,-6.5 745.33,-0.5 751.33,-0.5"/>
+<text xml:space="preserve" text-anchor="middle" x="770.56" y="-27.6" font-family="Helvetica,sans-Serif" font-size="11.00">Resumes</text>
+<polyline fill="none" stroke="black" points="801.79,-0.5 801.79,-61.3"/>
+<text xml:space="preserve" text-anchor="start" x="809.79" y="-47.4" font-family="Helvetica,sans-Serif" font-size="11.00">resume_id PK</text>
+<text xml:space="preserve" text-anchor="start" x="809.79" y="-34.2" font-family="Helvetica,sans-Serif" font-size="11.00">student_id FK</text>
+<text xml:space="preserve" text-anchor="start" x="809.79" y="-21" font-family="Helvetica,sans-Serif" font-size="11.00">file_url</text>
+<text xml:space="preserve" text-anchor="start" x="809.79" y="-7.8" font-family="Helvetica,sans-Serif" font-size="11.00">parsed_text</text>
+</g>
+<!-- Resumes&#45;&gt;Applications -->
+<g id="edge10" class="edge">
+<title>Resumes-&gt;Applications</title>
+<path fill="none" stroke="#33a02c" d="M881.76,-61.6C887.39,-64.6 892.94,-67.72 898.2,-70.9 926.85,-88.24 956.54,-109.3 983,-129.33"/>
+<polygon fill="#33a02c" stroke="#33a02c" points="980.57,-131.87 990.64,-135.16 984.81,-126.31 980.57,-131.87"/>
+<text xml:space="preserve" text-anchor="middle" x="926.7" y="-97.33" font-family="Times,serif" font-size="14.00">1:N</text>
+</g>
+</g>
+</svg>

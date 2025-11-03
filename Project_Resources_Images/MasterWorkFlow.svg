@@ -1,0 +1,319 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="955pt" height="954pt" viewBox="0.00 0.00 955.00 954.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 949.8)">
+<title>MasterFlow</title>
+<polygon fill="#ffffff" stroke="none" points="-4,4 -4,-949.8 951,-949.8 951,4 -4,4"/>
+<text xml:space="preserve" text-anchor="middle" x="473.5" y="-927.4" font-family="Helvetica Bold" font-size="16.00">HireWrite — Master Workflow (Vertical View)</text>
+<g id="clust1" class="cluster">
+<title>cluster_student</title>
+<path fill="#e0f2ff" stroke="#1f78b4" d="M751,-248.2C751,-248.2 927,-248.2 927,-248.2 933,-248.2 939,-254.2 939,-260.2 939,-260.2 939,-898.6 939,-898.6 939,-904.6 933,-910.6 927,-910.6 927,-910.6 751,-910.6 751,-910.6 745,-910.6 739,-904.6 739,-898.6 739,-898.6 739,-260.2 739,-260.2 739,-254.2 745,-248.2 751,-248.2"/>
+<text xml:space="preserve" text-anchor="middle" x="839" y="-894" font-family="Helvetica Bold" font-size="14.00">👨‍🎓 Student (Candidate)</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_recruiter</title>
+<path fill="#ebfbee" stroke="#2b8a3e" d="M20,-8C20,-8 158,-8 158,-8 164,-8 170,-14 170,-20 170,-20 170,-464.6 170,-464.6 170,-470.6 164,-476.6 158,-476.6 158,-476.6 20,-476.6 20,-476.6 14,-476.6 8,-470.6 8,-464.6 8,-464.6 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text xml:space="preserve" text-anchor="middle" x="89" y="-460" font-family="Helvetica Bold" font-size="14.00">🏢 Recruiter (Company)</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_admin</title>
+<path fill="#fff5f5" stroke="#e03131" d="M587,-81C587,-81 719,-81 719,-81 725,-81 731,-87 731,-93 731,-93 731,-464.6 731,-464.6 731,-470.6 725,-476.6 719,-476.6 719,-476.6 587,-476.6 587,-476.6 581,-476.6 575,-470.6 575,-464.6 575,-464.6 575,-93 575,-93 575,-87 581,-81 587,-81"/>
+<text xml:space="preserve" text-anchor="middle" x="653" y="-460" font-family="Helvetica Bold" font-size="14.00">🛡️ Admin</text>
+</g>
+<!-- SLogin -->
+<g id="node1" class="node">
+<title>SLogin</title>
+<path fill="#4dabf7" stroke="black" d="M846,-877.8C846,-877.8 770,-877.8 770,-877.8 764,-877.8 758,-871.8 758,-865.8 758,-865.8 758,-853.8 758,-853.8 758,-847.8 764,-841.8 770,-841.8 770,-841.8 846,-841.8 846,-841.8 852,-841.8 858,-847.8 858,-853.8 858,-853.8 858,-865.8 858,-865.8 858,-871.8 852,-877.8 846,-877.8"/>
+<text xml:space="preserve" text-anchor="middle" x="808" y="-855.6" font-family="Times,serif" font-size="14.00" fill="white">Login / Signup</text>
+</g>
+<!-- SProfile -->
+<g id="node2" class="node">
+<title>SProfile</title>
+<path fill="#74c0fc" stroke="black" d="M853.05,-804.8C853.05,-804.8 762.95,-804.8 762.95,-804.8 756.95,-804.8 750.95,-798.8 750.95,-792.8 750.95,-792.8 750.95,-780.8 750.95,-780.8 750.95,-774.8 756.95,-768.8 762.95,-768.8 762.95,-768.8 853.05,-768.8 853.05,-768.8 859.05,-768.8 865.05,-774.8 865.05,-780.8 865.05,-780.8 865.05,-792.8 865.05,-792.8 865.05,-798.8 859.05,-804.8 853.05,-804.8"/>
+<text xml:space="preserve" text-anchor="middle" x="808" y="-782.6" font-family="Times,serif" font-size="14.00">Profile + Resume</text>
+</g>
+<!-- SLogin&#45;&gt;SProfile -->
+<g id="edge1" class="edge">
+<title>SLogin-&gt;SProfile</title>
+<path fill="none" stroke="black" d="M808,-841.61C808,-834.03 808,-824.9 808,-816.34"/>
+<polygon fill="black" stroke="black" points="811.5,-816.34 808,-806.34 804.5,-816.34 811.5,-816.34"/>
+</g>
+<!-- SBrowse -->
+<g id="node3" class="node">
+<title>SBrowse</title>
+<path fill="#a5d8ff" stroke="black" d="M856.92,-731.8C856.92,-731.8 759.08,-731.8 759.08,-731.8 753.08,-731.8 747.08,-725.8 747.08,-719.8 747.08,-719.8 747.08,-702.2 747.08,-702.2 747.08,-696.2 753.08,-690.2 759.08,-690.2 759.08,-690.2 856.92,-690.2 856.92,-690.2 862.92,-690.2 868.92,-696.2 868.92,-702.2 868.92,-702.2 868.92,-719.8 868.92,-719.8 868.92,-725.8 862.92,-731.8 856.92,-731.8"/>
+<text xml:space="preserve" text-anchor="middle" x="808" y="-715.2" font-family="Times,serif" font-size="14.00">Browse Jobs</text>
+<text xml:space="preserve" text-anchor="middle" x="808" y="-698.4" font-family="Times,serif" font-size="14.00">Internal + External</text>
+</g>
+<!-- SProfile&#45;&gt;SBrowse -->
+<g id="edge2" class="edge">
+<title>SProfile-&gt;SBrowse</title>
+<path fill="none" stroke="black" d="M808,-768.31C808,-760.95 808,-752.15 808,-743.72"/>
+<polygon fill="black" stroke="black" points="811.5,-743.75 808,-733.75 804.5,-743.75 811.5,-743.75"/>
+</g>
+<!-- SApplyInt -->
+<g id="node4" class="node">
+<title>SApplyInt</title>
+<path fill="#4dabf7" stroke="black" d="M855.49,-653.2C855.49,-653.2 758.51,-653.2 758.51,-653.2 752.51,-653.2 746.51,-647.2 746.51,-641.2 746.51,-641.2 746.51,-629.2 746.51,-629.2 746.51,-623.2 752.51,-617.2 758.51,-617.2 758.51,-617.2 855.49,-617.2 855.49,-617.2 861.49,-617.2 867.49,-623.2 867.49,-629.2 867.49,-629.2 867.49,-641.2 867.49,-641.2 867.49,-647.2 861.49,-653.2 855.49,-653.2"/>
+<text xml:space="preserve" text-anchor="middle" x="807" y="-631" font-family="Times,serif" font-size="14.00" fill="white">Apply Internal Job</text>
+</g>
+<!-- SBrowse&#45;&gt;SApplyInt -->
+<g id="edge3" class="edge">
+<title>SBrowse-&gt;SApplyInt</title>
+<path fill="none" stroke="black" d="M807.73,-689.83C807.62,-682.06 807.5,-673.03 807.39,-664.62"/>
+<polygon fill="black" stroke="black" points="810.89,-664.8 807.25,-654.85 803.89,-664.9 810.89,-664.8"/>
+</g>
+<!-- SApplyExt -->
+<g id="node5" class="node">
+<title>SApplyExt</title>
+<path fill="#4dabf7" stroke="black" d="M919.04,-599.2C919.04,-599.2 776.96,-599.2 776.96,-599.2 770.96,-599.2 764.96,-593.2 764.96,-587.2 764.96,-587.2 764.96,-569.6 764.96,-569.6 764.96,-563.6 770.96,-557.6 776.96,-557.6 776.96,-557.6 919.04,-557.6 919.04,-557.6 925.04,-557.6 931.04,-563.6 931.04,-569.6 931.04,-569.6 931.04,-587.2 931.04,-587.2 931.04,-593.2 925.04,-599.2 919.04,-599.2"/>
+<text xml:space="preserve" text-anchor="middle" x="848" y="-582.6" font-family="Times,serif" font-size="14.00" fill="white">Apply External Job</text>
+<text xml:space="preserve" text-anchor="middle" x="848" y="-565.8" font-family="Times,serif" font-size="14.00" fill="white">(Extension Ask: Applied?)</text>
+</g>
+<!-- SBrowse&#45;&gt;SApplyExt -->
+<g id="edge8" class="edge">
+<title>SBrowse-&gt;SApplyExt</title>
+<path fill="none" stroke="black" d="M843.21,-689.83C856,-680.48 869.03,-668.11 876,-653.2 882.78,-638.71 881.01,-632.39 876,-617.2 875.1,-614.49 873.93,-611.81 872.57,-609.2"/>
+<polygon fill="black" stroke="black" points="875.66,-607.55 867.4,-600.92 869.73,-611.26 875.66,-607.55"/>
+</g>
+<!-- SFit -->
+<g id="node6" class="node">
+<title>SFit</title>
+<path fill="#5c7cfa" stroke="black" d="M855.6,-539.6C855.6,-539.6 766.4,-539.6 766.4,-539.6 760.4,-539.6 754.4,-533.6 754.4,-527.6 754.4,-527.6 754.4,-515.6 754.4,-515.6 754.4,-509.6 760.4,-503.6 766.4,-503.6 766.4,-503.6 855.6,-503.6 855.6,-503.6 861.6,-503.6 867.6,-509.6 867.6,-515.6 867.6,-515.6 867.6,-527.6 867.6,-527.6 867.6,-533.6 861.6,-539.6 855.6,-539.6"/>
+<text xml:space="preserve" text-anchor="middle" x="811" y="-517.4" font-family="Times,serif" font-size="14.00" fill="white">AI Fitment Score</text>
+</g>
+<!-- SApplyInt&#45;&gt;SFit -->
+<g id="edge4" class="edge">
+<title>SApplyInt-&gt;SFit</title>
+<path fill="none" stroke="black" d="M778.22,-616.8C772.47,-611.88 767.22,-605.98 764,-599.2 756.06,-582.5 755.7,-574.12 764,-557.6 765.79,-554.04 768.13,-550.74 770.82,-547.72"/>
+<polygon fill="black" stroke="black" points="773.12,-550.36 778.01,-540.97 768.33,-545.26 773.12,-550.36"/>
+</g>
+<!-- STrack -->
+<g id="node9" class="node">
+<title>STrack</title>
+<path fill="#228be6" stroke="black" d="M891.67,-297.8C891.67,-297.8 766.33,-297.8 766.33,-297.8 760.33,-297.8 754.33,-291.8 754.33,-285.8 754.33,-285.8 754.33,-268.2 754.33,-268.2 754.33,-262.2 760.33,-256.2 766.33,-256.2 766.33,-256.2 891.67,-256.2 891.67,-256.2 897.67,-256.2 903.67,-262.2 903.67,-268.2 903.67,-268.2 903.67,-285.8 903.67,-285.8 903.67,-291.8 897.67,-297.8 891.67,-297.8"/>
+<text xml:space="preserve" text-anchor="middle" x="829" y="-281.2" font-family="Times,serif" font-size="14.00" fill="white">Track Applications</text>
+<text xml:space="preserve" text-anchor="middle" x="829" y="-264.4" font-family="Times,serif" font-size="14.00" fill="white">(Source: App/Web/Ext)</text>
+</g>
+<!-- SApplyExt&#45;&gt;STrack -->
+<g id="edge9" class="edge">
+<title>SApplyExt-&gt;STrack</title>
+<path fill="none" stroke="black" d="M881.83,-557.39C904.41,-541.22 930,-516.16 930,-485.6 930,-485.6 930,-485.6 930,-351.8 930,-330.81 915.6,-315.15 897.68,-303.79"/>
+<polygon fill="black" stroke="black" points="899.77,-300.95 889.36,-298.99 896.27,-307.01 899.77,-300.95"/>
+</g>
+<!-- SRec -->
+<g id="node7" class="node">
+<title>SRec</title>
+<path fill="#748ffc" stroke="black" d="M898.68,-443.8C898.68,-443.8 759.32,-443.8 759.32,-443.8 753.32,-443.8 747.32,-437.8 747.32,-431.8 747.32,-431.8 747.32,-419.8 747.32,-419.8 747.32,-413.8 753.32,-407.8 759.32,-407.8 759.32,-407.8 898.68,-407.8 898.68,-407.8 904.68,-407.8 910.68,-413.8 910.68,-419.8 910.68,-419.8 910.68,-431.8 910.68,-431.8 910.68,-437.8 904.68,-443.8 898.68,-443.8"/>
+<text xml:space="preserve" text-anchor="middle" x="829" y="-421.6" font-family="Times,serif" font-size="14.00" fill="white">Resume Recommendation</text>
+</g>
+<!-- SFit&#45;&gt;SRec -->
+<g id="edge5" class="edge">
+<title>SFit-&gt;SRec</title>
+<path fill="none" stroke="black" d="M814.3,-503.4C816.87,-489.99 820.5,-471.09 823.51,-455.42"/>
+<polygon fill="black" stroke="black" points="826.93,-456.18 825.37,-445.7 820.05,-454.86 826.93,-456.18"/>
+</g>
+<!-- SCover -->
+<g id="node8" class="node">
+<title>SCover</title>
+<path fill="#91a7ff" stroke="black" d="M893.41,-370.8C893.41,-370.8 764.59,-370.8 764.59,-370.8 758.59,-370.8 752.59,-364.8 752.59,-358.8 752.59,-358.8 752.59,-346.8 752.59,-346.8 752.59,-340.8 758.59,-334.8 764.59,-334.8 764.59,-334.8 893.41,-334.8 893.41,-334.8 899.41,-334.8 905.41,-340.8 905.41,-346.8 905.41,-346.8 905.41,-358.8 905.41,-358.8 905.41,-364.8 899.41,-370.8 893.41,-370.8"/>
+<text xml:space="preserve" text-anchor="middle" x="829" y="-348.6" font-family="Times,serif" font-size="14.00" fill="white">Cover Letter Generation</text>
+</g>
+<!-- SRec&#45;&gt;SCover -->
+<g id="edge6" class="edge">
+<title>SRec-&gt;SCover</title>
+<path fill="none" stroke="black" d="M829,-407.61C829,-400.03 829,-390.9 829,-382.34"/>
+<polygon fill="black" stroke="black" points="832.5,-382.34 829,-372.34 825.5,-382.34 832.5,-382.34"/>
+</g>
+<!-- SCover&#45;&gt;STrack -->
+<g id="edge7" class="edge">
+<title>SCover-&gt;STrack</title>
+<path fill="none" stroke="black" d="M829,-334.31C829,-326.95 829,-318.15 829,-309.72"/>
+<polygon fill="black" stroke="black" points="832.5,-309.75 829,-299.75 825.5,-309.75 832.5,-309.75"/>
+</g>
+<!-- DB -->
+<g id="node21" class="node">
+<title>DB</title>
+<path fill="#ffe066" stroke="black" d="M504.86,-214C504.86,-216.87 453.38,-219.2 390,-219.2 326.62,-219.2 275.14,-216.87 275.14,-214 275.14,-214 275.14,-167.2 275.14,-167.2 275.14,-164.33 326.62,-162 390,-162 453.38,-162 504.86,-164.33 504.86,-167.2 504.86,-167.2 504.86,-214 504.86,-214"/>
+<path fill="none" stroke="black" d="M504.86,-214C504.86,-211.13 453.38,-208.8 390,-208.8 326.62,-208.8 275.14,-211.13 275.14,-214"/>
+<text xml:space="preserve" text-anchor="middle" x="390" y="-194.8" font-family="Times,serif" font-size="14.00">💾 Central Database</text>
+<text xml:space="preserve" text-anchor="middle" x="390" y="-178" font-family="Times,serif" font-size="14.00">Profiles | Jobs | Applications | Sources</text>
+</g>
+<!-- STrack&#45;&gt;DB -->
+<g id="edge10" class="edge">
+<title>STrack-&gt;DB</title>
+<path fill="none" stroke="black" d="M764.3,-255.72C754.53,-252.99 744.54,-250.38 735,-248.2 694.17,-238.85 597.1,-223.13 516.29,-210.63"/>
+<polygon fill="black" stroke="black" points="516.92,-207.19 506.5,-209.12 515.85,-214.1 516.92,-207.19"/>
+</g>
+<!-- RLogin -->
+<g id="node10" class="node">
+<title>RLogin</title>
+<path fill="#37b24d" stroke="black" d="M132,-443.8C132,-443.8 56,-443.8 56,-443.8 50,-443.8 44,-437.8 44,-431.8 44,-431.8 44,-419.8 44,-419.8 44,-413.8 50,-407.8 56,-407.8 56,-407.8 132,-407.8 132,-407.8 138,-407.8 144,-413.8 144,-419.8 144,-419.8 144,-431.8 144,-431.8 144,-437.8 138,-443.8 132,-443.8"/>
+<text xml:space="preserve" text-anchor="middle" x="94" y="-421.6" font-family="Times,serif" font-size="14.00" fill="white">Login / Signup</text>
+</g>
+<!-- RTeam -->
+<g id="node11" class="node">
+<title>RTeam</title>
+<path fill="#69db7c" stroke="black" d="M147.93,-370.8C147.93,-370.8 40.07,-370.8 40.07,-370.8 34.07,-370.8 28.07,-364.8 28.07,-358.8 28.07,-358.8 28.07,-346.8 28.07,-346.8 28.07,-340.8 34.07,-334.8 40.07,-334.8 40.07,-334.8 147.93,-334.8 147.93,-334.8 153.93,-334.8 159.93,-340.8 159.93,-346.8 159.93,-346.8 159.93,-358.8 159.93,-358.8 159.93,-364.8 153.93,-370.8 147.93,-370.8"/>
+<text xml:space="preserve" text-anchor="middle" x="94" y="-348.6" font-family="Times,serif" font-size="14.00">Add Team Members</text>
+</g>
+<!-- RLogin&#45;&gt;RTeam -->
+<g id="edge11" class="edge">
+<title>RLogin-&gt;RTeam</title>
+<path fill="none" stroke="black" d="M94,-407.61C94,-400.03 94,-390.9 94,-382.34"/>
+<polygon fill="black" stroke="black" points="97.5,-382.34 94,-372.34 90.5,-382.34 97.5,-382.34"/>
+</g>
+<!-- RPost -->
+<g id="node12" class="node">
+<title>RPost</title>
+<path fill="#38d9a9" stroke="black" d="M127.73,-295C127.73,-295 60.27,-295 60.27,-295 54.27,-295 48.27,-289 48.27,-283 48.27,-283 48.27,-271 48.27,-271 48.27,-265 54.27,-259 60.27,-259 60.27,-259 127.73,-259 127.73,-259 133.73,-259 139.73,-265 139.73,-271 139.73,-271 139.73,-283 139.73,-283 139.73,-289 133.73,-295 127.73,-295"/>
+<text xml:space="preserve" text-anchor="middle" x="94" y="-272.8" font-family="Times,serif" font-size="14.00">Post Job (JD)</text>
+</g>
+<!-- RTeam&#45;&gt;RPost -->
+<g id="edge12" class="edge">
+<title>RTeam-&gt;RPost</title>
+<path fill="none" stroke="black" d="M94,-334.31C94,-326.04 94,-315.95 94,-306.6"/>
+<polygon fill="black" stroke="black" points="97.5,-306.88 94,-296.88 90.5,-306.88 97.5,-306.88"/>
+</g>
+<!-- RApps -->
+<g id="node13" class="node">
+<title>RApps</title>
+<path fill="#20c997" stroke="black" d="M145.06,-208.6C145.06,-208.6 32.94,-208.6 32.94,-208.6 26.94,-208.6 20.94,-202.6 20.94,-196.6 20.94,-196.6 20.94,-184.6 20.94,-184.6 20.94,-178.6 26.94,-172.6 32.94,-172.6 32.94,-172.6 145.06,-172.6 145.06,-172.6 151.06,-172.6 157.06,-178.6 157.06,-184.6 157.06,-184.6 157.06,-196.6 157.06,-196.6 157.06,-202.6 151.06,-208.6 145.06,-208.6"/>
+<text xml:space="preserve" text-anchor="middle" x="89" y="-186.4" font-family="Times,serif" font-size="14.00" fill="white">Receive Applications</text>
+</g>
+<!-- RPost&#45;&gt;RApps -->
+<g id="edge13" class="edge">
+<title>RPost-&gt;RApps</title>
+<path fill="none" stroke="black" d="M92.96,-258.51C92.31,-247.54 91.46,-233.11 90.71,-220.47"/>
+<polygon fill="black" stroke="black" points="94.21,-220.35 90.12,-210.58 87.22,-220.77 94.21,-220.35"/>
+</g>
+<!-- RPost&#45;&gt;DB -->
+<g id="edge16" class="edge">
+<title>RPost-&gt;DB</title>
+<path fill="none" stroke="black" d="M139.93,-262.91C178.73,-251.84 235.79,-235.57 285.61,-221.37"/>
+<polygon fill="black" stroke="black" points="286.33,-224.8 294.99,-218.69 284.41,-218.07 286.33,-224.8"/>
+</g>
+<!-- RShortlist -->
+<g id="node14" class="node">
+<title>RShortlist</title>
+<path fill="#12b886" stroke="black" d="M149.93,-125C149.93,-125 28.07,-125 28.07,-125 22.07,-125 16.07,-119 16.07,-113 16.07,-113 16.07,-101 16.07,-101 16.07,-95 22.07,-89 28.07,-89 28.07,-89 149.93,-89 149.93,-89 155.93,-89 161.93,-95 161.93,-101 161.93,-101 161.93,-113 161.93,-113 161.93,-119 155.93,-125 149.93,-125"/>
+<text xml:space="preserve" text-anchor="middle" x="89" y="-102.8" font-family="Times,serif" font-size="14.00" fill="white">Shortlist / Reject / Hire</text>
+</g>
+<!-- RApps&#45;&gt;RShortlist -->
+<g id="edge14" class="edge">
+<title>RApps-&gt;RShortlist</title>
+<path fill="none" stroke="black" d="M89,-172.29C89,-161.91 89,-148.44 89,-136.52"/>
+<polygon fill="black" stroke="black" points="92.5,-136.79 89,-126.79 85.5,-136.79 92.5,-136.79"/>
+</g>
+<!-- RApps&#45;&gt;DB -->
+<g id="edge17" class="edge">
+<title>RApps-&gt;DB</title>
+<path fill="none" stroke="black" d="M157.49,-190.6C192.73,-190.6 227.97,-190.6 263.21,-190.6"/>
+<polygon fill="black" stroke="black" points="263.14,-194.1 273.14,-190.6 263.14,-187.1 263.14,-194.1"/>
+</g>
+<!-- RDash -->
+<g id="node15" class="node">
+<title>RDash</title>
+<path fill="#40c057" stroke="black" d="M143.12,-52C143.12,-52 34.88,-52 34.88,-52 28.88,-52 22.88,-46 22.88,-40 22.88,-40 22.88,-28 22.88,-28 22.88,-22 28.88,-16 34.88,-16 34.88,-16 143.12,-16 143.12,-16 149.12,-16 155.12,-22 155.12,-28 155.12,-28 155.12,-40 155.12,-40 155.12,-46 149.12,-52 143.12,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="89" y="-29.8" font-family="Times,serif" font-size="14.00">Recruiter Dashboard</text>
+</g>
+<!-- RShortlist&#45;&gt;RDash -->
+<g id="edge15" class="edge">
+<title>RShortlist-&gt;RDash</title>
+<path fill="none" stroke="black" d="M89,-88.81C89,-81.23 89,-72.1 89,-63.54"/>
+<polygon fill="black" stroke="black" points="92.5,-63.54 89,-53.54 85.5,-63.54 92.5,-63.54"/>
+</g>
+<!-- ALogin -->
+<g id="node16" class="node">
+<title>ALogin</title>
+<path fill="#f03e3e" stroke="black" d="M657,-443.8C657,-443.8 627,-443.8 627,-443.8 621,-443.8 615,-437.8 615,-431.8 615,-431.8 615,-419.8 615,-419.8 615,-413.8 621,-407.8 627,-407.8 627,-407.8 657,-407.8 657,-407.8 663,-407.8 669,-413.8 669,-419.8 669,-419.8 669,-431.8 669,-431.8 669,-437.8 663,-443.8 657,-443.8"/>
+<text xml:space="preserve" text-anchor="middle" x="642" y="-421.6" font-family="Times,serif" font-size="14.00" fill="white">Login</text>
+</g>
+<!-- AUsers -->
+<g id="node17" class="node">
+<title>AUsers</title>
+<path fill="#ff8787" stroke="black" d="M678.24,-370.8C678.24,-370.8 605.76,-370.8 605.76,-370.8 599.76,-370.8 593.76,-364.8 593.76,-358.8 593.76,-358.8 593.76,-346.8 593.76,-346.8 593.76,-340.8 599.76,-334.8 605.76,-334.8 605.76,-334.8 678.24,-334.8 678.24,-334.8 684.24,-334.8 690.24,-340.8 690.24,-346.8 690.24,-346.8 690.24,-358.8 690.24,-358.8 690.24,-364.8 684.24,-370.8 678.24,-370.8"/>
+<text xml:space="preserve" text-anchor="middle" x="642" y="-348.6" font-family="Times,serif" font-size="14.00">Manage Users</text>
+</g>
+<!-- ALogin&#45;&gt;AUsers -->
+<g id="edge18" class="edge">
+<title>ALogin-&gt;AUsers</title>
+<path fill="none" stroke="black" d="M642,-407.61C642,-400.03 642,-390.9 642,-382.34"/>
+<polygon fill="black" stroke="black" points="645.5,-382.34 642,-372.34 638.5,-382.34 645.5,-382.34"/>
+</g>
+<!-- AJobs -->
+<g id="node18" class="node">
+<title>AJobs</title>
+<path fill="#ff6b6b" stroke="black" d="M711.02,-295C711.02,-295 594.98,-295 594.98,-295 588.98,-295 582.98,-289 582.98,-283 582.98,-283 582.98,-271 582.98,-271 582.98,-265 588.98,-259 594.98,-259 594.98,-259 711.02,-259 711.02,-259 717.02,-259 723.02,-265 723.02,-271 723.02,-271 723.02,-283 723.02,-283 723.02,-289 717.02,-295 711.02,-295"/>
+<text xml:space="preserve" text-anchor="middle" x="653" y="-272.8" font-family="Times,serif" font-size="14.00" fill="white">Approve / Reject Jobs</text>
+</g>
+<!-- AUsers&#45;&gt;AJobs -->
+<g id="edge19" class="edge">
+<title>AUsers-&gt;AJobs</title>
+<path fill="none" stroke="black" d="M644.61,-334.31C645.84,-326.04 647.34,-315.95 648.74,-306.6"/>
+<polygon fill="black" stroke="black" points="652.18,-307.27 650.19,-296.86 645.25,-306.24 652.18,-307.27"/>
+</g>
+<!-- AUsers&#45;&gt;DB -->
+<g id="edge22" class="edge">
+<title>AUsers-&gt;DB</title>
+<path fill="none" stroke="black" d="M614.55,-334.35C573.6,-308.32 495.73,-258.81 443.33,-225.5"/>
+<polygon fill="black" stroke="black" points="445.45,-222.7 435.13,-220.29 441.69,-228.61 445.45,-222.7"/>
+</g>
+<!-- ATrack -->
+<g id="node19" class="node">
+<title>ATrack</title>
+<path fill="#fa5252" stroke="black" d="M711.47,-211.4C711.47,-211.4 598.53,-211.4 598.53,-211.4 592.53,-211.4 586.53,-205.4 586.53,-199.4 586.53,-199.4 586.53,-181.8 586.53,-181.8 586.53,-175.8 592.53,-169.8 598.53,-169.8 598.53,-169.8 711.47,-169.8 711.47,-169.8 717.47,-169.8 723.47,-175.8 723.47,-181.8 723.47,-181.8 723.47,-199.4 723.47,-199.4 723.47,-205.4 717.47,-211.4 711.47,-211.4"/>
+<text xml:space="preserve" text-anchor="middle" x="655" y="-194.8" font-family="Times,serif" font-size="14.00" fill="white">Monitor Applications</text>
+<text xml:space="preserve" text-anchor="middle" x="655" y="-178" font-family="Times,serif" font-size="14.00" fill="white">+ Sources</text>
+</g>
+<!-- AJobs&#45;&gt;ATrack -->
+<g id="edge20" class="edge">
+<title>AJobs-&gt;ATrack</title>
+<path fill="none" stroke="black" d="M653.41,-258.51C653.66,-248.3 653.97,-235.11 654.25,-223.14"/>
+<polygon fill="black" stroke="black" points="657.75,-223.33 654.49,-213.25 650.75,-223.16 657.75,-223.33"/>
+</g>
+<!-- AJobs&#45;&gt;DB -->
+<g id="edge23" class="edge">
+<title>AJobs-&gt;DB</title>
+<path fill="none" stroke="black" d="M600.94,-258.52C580.69,-251.78 557.29,-244.05 536,-237.2 520.6,-232.24 504.25,-227.06 488.29,-222.04"/>
+<polygon fill="black" stroke="black" points="489.35,-218.71 478.76,-219.05 487.26,-225.38 489.35,-218.71"/>
+</g>
+<!-- AAnalytics -->
+<g id="node20" class="node">
+<title>AAnalytics</title>
+<path fill="#e64980" stroke="black" d="M708.55,-125C708.55,-125 601.45,-125 601.45,-125 595.45,-125 589.45,-119 589.45,-113 589.45,-113 589.45,-101 589.45,-101 589.45,-95 595.45,-89 601.45,-89 601.45,-89 708.55,-89 708.55,-89 714.55,-89 720.55,-95 720.55,-101 720.55,-101 720.55,-113 720.55,-113 720.55,-119 714.55,-125 708.55,-125"/>
+<text xml:space="preserve" text-anchor="middle" x="655" y="-102.8" font-family="Times,serif" font-size="14.00" fill="white">Analytics &amp; Reports</text>
+</g>
+<!-- ATrack&#45;&gt;AAnalytics -->
+<g id="edge21" class="edge">
+<title>ATrack-&gt;AAnalytics</title>
+<path fill="none" stroke="black" d="M655,-169.43C655,-159.62 655,-147.66 655,-136.9"/>
+<polygon fill="black" stroke="black" points="658.5,-136.96 655,-126.96 651.5,-136.96 658.5,-136.96"/>
+</g>
+<!-- ATrack&#45;&gt;DB -->
+<g id="edge24" class="edge">
+<title>ATrack-&gt;DB</title>
+<path fill="none" stroke="black" d="M586.23,-190.6C563,-190.6 539.78,-190.6 516.56,-190.6"/>
+<polygon fill="black" stroke="black" points="516.67,-187.1 506.67,-190.6 516.67,-194.1 516.67,-187.1"/>
+</g>
+<!-- DB&#45;&gt;SBrowse -->
+<g id="edge26" class="edge">
+<title>DB-&gt;SBrowse</title>
+<path fill="none" stroke="#228be6" d="M405.86,-219.57C413.49,-235.58 421,-256.33 421,-276 421,-636.2 421,-636.2 421,-636.2 421,-699.52 623.41,-709.85 735.47,-710.72"/>
+<polygon fill="#228be6" stroke="#228be6" points="735.15,-714.22 745.17,-710.77 735.18,-707.22 735.15,-714.22"/>
+<text xml:space="preserve" text-anchor="middle" x="448.81" y="-421.6" font-family="Times,serif" font-size="14.00" fill="#228be6">Jobs Feed</text>
+</g>
+<!-- DB&#45;&gt;RApps -->
+<g id="edge25" class="edge">
+<title>DB-&gt;RApps</title>
+<path fill="none" stroke="#20c997" d="M274.73,-190.6C239.27,-190.6 201.04,-190.6 168.54,-190.6"/>
+<polygon fill="#20c997" stroke="#20c997" points="168.82,-187.1 158.82,-190.6 168.82,-194.1 168.82,-187.1"/>
+<text xml:space="preserve" text-anchor="middle" x="216.1" y="-197.8" font-family="Times,serif" font-size="14.00" fill="#20c997">Applications Data</text>
+</g>
+<!-- DB&#45;&gt;ATrack -->
+<g id="edge27" class="edge">
+<title>DB-&gt;ATrack</title>
+<path fill="none" stroke="#f03e3e" d="M505.08,-190.6C528.63,-190.6 552.93,-190.6 574.93,-190.6"/>
+<polygon fill="#f03e3e" stroke="#f03e3e" points="574.69,-194.1 584.69,-190.6 574.69,-187.1 574.69,-194.1"/>
+<text xml:space="preserve" text-anchor="middle" x="545.7" y="-197.8" font-family="Times,serif" font-size="14.00" fill="#f03e3e">Monitoring</text>
+</g>
+</g>
+</svg>

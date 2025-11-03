@@ -1,0 +1,257 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1211pt" height="387pt" viewBox="0.00 0.00 1211.00 387.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 382.51)">
+<title>HireWrite_Architecture</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-382.51 1206.76,-382.51 1206.76,4 -4,4"/>
+<text xml:space="preserve" text-anchor="middle" x="601.38" y="-365.51" font-family="Helvetica,sans-Serif" font-size="10.00">HireWrite — Three Platforms + Shared Backend</text>
+<g id="clust1" class="cluster">
+<title>cluster_candidate</title>
+<path fill="none" stroke="#c6dbef" d="M165.76,-257.25C165.76,-257.25 471.76,-257.25 471.76,-257.25 477.76,-257.25 483.76,-263.25 483.76,-269.25 483.76,-269.25 483.76,-338.51 483.76,-338.51 483.76,-344.51 477.76,-350.51 471.76,-350.51 471.76,-350.51 165.76,-350.51 165.76,-350.51 159.76,-350.51 153.76,-344.51 153.76,-338.51 153.76,-338.51 153.76,-269.25 153.76,-269.25 153.76,-263.25 159.76,-257.25 165.76,-257.25"/>
+<text xml:space="preserve" text-anchor="middle" x="318.76" y="-337.51" font-family="Helvetica,sans-Serif" font-size="10.00">Candidate Platform</text>
+<text xml:space="preserve" text-anchor="middle" x="318.76" y="-325.51" font-family="Helvetica,sans-Serif" font-size="10.00">candidate.hirewrite.com</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_employer</title>
+<path fill="none" stroke="#fdd0a2" d="M641.76,-257.25C641.76,-257.25 827.76,-257.25 827.76,-257.25 833.76,-257.25 839.76,-263.25 839.76,-269.25 839.76,-269.25 839.76,-338.51 839.76,-338.51 839.76,-344.51 833.76,-350.51 827.76,-350.51 827.76,-350.51 641.76,-350.51 641.76,-350.51 635.76,-350.51 629.76,-344.51 629.76,-338.51 629.76,-338.51 629.76,-269.25 629.76,-269.25 629.76,-263.25 635.76,-257.25 641.76,-257.25"/>
+<text xml:space="preserve" text-anchor="middle" x="734.76" y="-337.51" font-family="Helvetica,sans-Serif" font-size="10.00">Employer Platform</text>
+<text xml:space="preserve" text-anchor="middle" x="734.76" y="-325.51" font-family="Helvetica,sans-Serif" font-size="10.00">employer.hirewrite.com</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_legend</title>
+</g>
+<!-- candidate_web -->
+<g id="node1" class="node">
+<title>candidate_web</title>
+<polygon fill="#9ecae1" stroke="black" points="977.89,-309.88 849.63,-309.88 849.63,-265.88 977.89,-265.88 977.89,-309.88"/>
+<text xml:space="preserve" text-anchor="middle" x="913.76" y="-296.88" font-family="Helvetica,sans-Serif" font-size="10.00">Web App</text>
+<text xml:space="preserve" text-anchor="middle" x="913.76" y="-284.88" font-family="Helvetica,sans-Serif" font-size="10.00">(React)</text>
+<text xml:space="preserve" text-anchor="middle" x="913.76" y="-272.88" font-family="Helvetica,sans-Serif" font-size="10.00">(candidate.hirewrite.com)</text>
+</g>
+<!-- backend -->
+<g id="node9" class="node">
+<title>backend</title>
+<polygon fill="#ffcc99" stroke="black" points="616.32,-170.83 616.32,-198.73 533.39,-218.45 416.12,-218.45 333.2,-198.73 333.2,-170.83 416.12,-151.1 533.39,-151.1 616.32,-170.83"/>
+<text xml:space="preserve" text-anchor="middle" x="474.76" y="-193.78" font-family="Helvetica,sans-Serif" font-size="10.00">Spring Boot Backend</text>
+<text xml:space="preserve" text-anchor="middle" x="474.76" y="-181.78" font-family="Helvetica,sans-Serif" font-size="10.00">(Java) — Single API Layer</text>
+<text xml:space="preserve" text-anchor="middle" x="474.76" y="-169.78" font-family="Helvetica,sans-Serif" font-size="10.00">Auth (JWT/OAuth2) / Role-based ACL</text>
+</g>
+<!-- candidate_web&#45;&gt;backend -->
+<g id="edge1" class="edge">
+<title>candidate_web-&gt;backend</title>
+<path fill="none" stroke="#08519c" d="M865.94,-265.49C858.58,-262.53 851.02,-259.68 843.76,-257.25 769.9,-232.53 684.69,-215.32 614.78,-204"/>
+<polygon fill="#08519c" stroke="#08519c" points="615.61,-200.59 605.19,-202.47 614.51,-207.5 615.61,-200.59"/>
+<text xml:space="preserve" text-anchor="middle" x="845.14" y="-239.15" font-family="Helvetica,sans-Serif" font-size="9.00">REST/GraphQL API</text>
+</g>
+<!-- candidate_ios -->
+<g id="node2" class="node">
+<title>candidate_ios</title>
+<ellipse fill="#9ecae1" stroke="black" cx="437.76" cy="-287.88" rx="37.65" ry="22.63"/>
+<text xml:space="preserve" text-anchor="middle" x="437.76" y="-290.88" font-family="Helvetica,sans-Serif" font-size="10.00">iOS App</text>
+<text xml:space="preserve" text-anchor="middle" x="437.76" y="-278.88" font-family="Helvetica,sans-Serif" font-size="10.00">(Swift)</text>
+</g>
+<!-- candidate_ios&#45;&gt;backend -->
+<g id="edge2" class="edge">
+<title>candidate_ios-&gt;backend</title>
+<path fill="none" stroke="#08519c" d="M451.84,-266.58C455.51,-260.57 459.16,-253.83 461.76,-247.25 463.91,-241.81 465.73,-235.95 467.26,-230.09"/>
+<polygon fill="#08519c" stroke="#08519c" points="470.66,-230.93 469.53,-220.39 463.84,-229.34 470.66,-230.93"/>
+<text xml:space="preserve" text-anchor="middle" x="489.89" y="-239.15" font-family="Helvetica,sans-Serif" font-size="9.00">API (mobile)</text>
+</g>
+<!-- candidate_android -->
+<g id="node3" class="node">
+<title>candidate_android</title>
+<ellipse fill="#9ecae1" stroke="black" cx="211.76" cy="-287.88" rx="50.23" ry="22.63"/>
+<text xml:space="preserve" text-anchor="middle" x="211.76" y="-290.88" font-family="Helvetica,sans-Serif" font-size="10.00">Android App</text>
+<text xml:space="preserve" text-anchor="middle" x="211.76" y="-278.88" font-family="Helvetica,sans-Serif" font-size="10.00">(Kotlin)</text>
+</g>
+<!-- candidate_android&#45;&gt;backend -->
+<g id="edge3" class="edge">
+<title>candidate_android-&gt;backend</title>
+<path fill="none" stroke="#08519c" d="M234.18,-267.29C247.17,-256.83 264.27,-244.49 281.25,-236.45 304.15,-225.62 329.71,-216.84 354.56,-209.83"/>
+<polygon fill="#08519c" stroke="#08519c" points="355.35,-213.24 364.07,-207.23 353.51,-206.49 355.35,-213.24"/>
+<text xml:space="preserve" text-anchor="middle" x="306" y="-239.15" font-family="Helvetica,sans-Serif" font-size="9.00">API (mobile)</text>
+</g>
+<!-- candidate_ext -->
+<g id="node4" class="node">
+<title>candidate_ext</title>
+<polygon fill="#9ecae1" stroke="black" points="381.82,-305.88 279.69,-305.88 279.69,-301.88 275.69,-301.88 275.69,-297.88 279.69,-297.88 279.69,-277.88 275.69,-277.88 275.69,-273.88 279.69,-273.88 279.69,-269.88 381.82,-269.88 381.82,-305.88"/>
+<polyline fill="none" stroke="black" points="279.69,-301.88 283.69,-301.88 283.69,-297.88 279.69,-297.88"/>
+<polyline fill="none" stroke="black" points="279.69,-277.88 283.69,-277.88 283.69,-273.88 279.69,-273.88"/>
+<text xml:space="preserve" text-anchor="middle" x="330.76" y="-290.88" font-family="Helvetica,sans-Serif" font-size="10.00">Chrome Extension</text>
+<text xml:space="preserve" text-anchor="middle" x="330.76" y="-278.88" font-family="Helvetica,sans-Serif" font-size="10.00">(redirects → profile)</text>
+</g>
+<!-- candidate_ext&#45;&gt;backend -->
+<g id="edge4" class="edge">
+<title>candidate_ext-&gt;backend</title>
+<path fill="none" stroke="#08519c" d="M330.12,-269.66C330.62,-258.97 332.99,-245.58 340.71,-236.45 347.94,-227.9 356.77,-220.8 366.42,-214.88"/>
+<polygon fill="#08519c" stroke="#08519c" points="367.96,-218.03 374.98,-210.1 364.54,-211.92 367.96,-218.03"/>
+<text xml:space="preserve" text-anchor="middle" x="399.23" y="-239.15" font-family="Helvetica,sans-Serif" font-size="9.00">Quick Apply / OAuth Redirect</text>
+</g>
+<!-- employer_web -->
+<g id="node5" class="node">
+<title>employer_web</title>
+<polygon fill="#fdae6b" stroke="black" points="619.77,-309.88 493.75,-309.88 493.75,-265.88 619.77,-265.88 619.77,-309.88"/>
+<text xml:space="preserve" text-anchor="middle" x="556.76" y="-296.88" font-family="Helvetica,sans-Serif" font-size="10.00">Web App</text>
+<text xml:space="preserve" text-anchor="middle" x="556.76" y="-284.88" font-family="Helvetica,sans-Serif" font-size="10.00">(React)</text>
+<text xml:space="preserve" text-anchor="middle" x="556.76" y="-272.88" font-family="Helvetica,sans-Serif" font-size="10.00">(employer.hirewrite.com)</text>
+</g>
+<!-- employer_web&#45;&gt;backend -->
+<g id="edge5" class="edge">
+<title>employer_web-&gt;backend</title>
+<path fill="none" stroke="#8c2d04" d="M541.18,-265.53C534.43,-256.45 526.34,-245.83 518.76,-236.45 516.34,-233.46 513.81,-230.4 511.25,-227.34"/>
+<polygon fill="#8c2d04" stroke="#8c2d04" points="514.08,-225.27 504.95,-219.91 508.74,-229.8 514.08,-225.27"/>
+<text xml:space="preserve" text-anchor="middle" x="566.53" y="-239.15" font-family="Helvetica,sans-Serif" font-size="9.00">REST/GraphQL API</text>
+</g>
+<!-- employer_ios -->
+<g id="node6" class="node">
+<title>employer_ios</title>
+<ellipse fill="#fdae6b" stroke="black" cx="675.76" cy="-287.88" rx="37.65" ry="22.63"/>
+<text xml:space="preserve" text-anchor="middle" x="675.76" y="-290.88" font-family="Helvetica,sans-Serif" font-size="10.00">iOS App</text>
+<text xml:space="preserve" text-anchor="middle" x="675.76" y="-278.88" font-family="Helvetica,sans-Serif" font-size="10.00">(Swift)</text>
+</g>
+<!-- employer_ios&#45;&gt;backend -->
+<g id="edge6" class="edge">
+<title>employer_ios-&gt;backend</title>
+<path fill="none" stroke="#8c2d04" d="M655.52,-268.58C643.23,-258.15 626.85,-245.42 610.76,-236.45 597.83,-229.25 583.67,-222.68 569.53,-216.84"/>
+<polygon fill="#8c2d04" stroke="#8c2d04" points="571.24,-213.76 560.66,-213.28 568.64,-220.25 571.24,-213.76"/>
+<text xml:space="preserve" text-anchor="middle" x="652.67" y="-239.15" font-family="Helvetica,sans-Serif" font-size="9.00">API (mobile)</text>
+</g>
+<!-- employer_android -->
+<g id="node7" class="node">
+<title>employer_android</title>
+<ellipse fill="#fdae6b" stroke="black" cx="781.76" cy="-287.88" rx="50.23" ry="22.63"/>
+<text xml:space="preserve" text-anchor="middle" x="781.76" y="-290.88" font-family="Helvetica,sans-Serif" font-size="10.00">Android App</text>
+<text xml:space="preserve" text-anchor="middle" x="781.76" y="-278.88" font-family="Helvetica,sans-Serif" font-size="10.00">(Kotlin)</text>
+</g>
+<!-- employer_android&#45;&gt;backend -->
+<g id="edge7" class="edge">
+<title>employer_android-&gt;backend</title>
+<path fill="none" stroke="#8c2d04" d="M751.49,-269.34C732.06,-258.67 706.02,-245.41 681.76,-236.45 653.75,-226.11 622.83,-217.26 593.62,-209.98"/>
+<polygon fill="#8c2d04" stroke="#8c2d04" points="594.54,-206.6 583.99,-207.63 592.87,-213.4 594.54,-206.6"/>
+<text xml:space="preserve" text-anchor="middle" x="732.02" y="-239.15" font-family="Helvetica,sans-Serif" font-size="9.00">API (mobile)</text>
+</g>
+<!-- admin_web -->
+<g id="node8" class="node">
+<title>admin_web</title>
+<polygon fill="#bcbddc" stroke="black" points="133.82,-309.88 21.69,-309.88 21.69,-265.88 133.82,-265.88 133.82,-309.88"/>
+<text xml:space="preserve" text-anchor="middle" x="77.76" y="-296.88" font-family="Helvetica,sans-Serif" font-size="10.00">Admin Web App</text>
+<text xml:space="preserve" text-anchor="middle" x="77.76" y="-284.88" font-family="Helvetica,sans-Serif" font-size="10.00">(React)</text>
+<text xml:space="preserve" text-anchor="middle" x="77.76" y="-272.88" font-family="Helvetica,sans-Serif" font-size="10.00">(admin.hirewrite.com)</text>
+</g>
+<!-- admin_web&#45;&gt;backend -->
+<g id="edge8" class="edge">
+<title>admin_web-&gt;backend</title>
+<path fill="none" stroke="#54278f" d="M108.8,-265.56C125.2,-255.25 146.07,-243.6 166.24,-236.45 215.35,-219.06 271.01,-207.58 321.4,-200.03"/>
+<polygon fill="#54278f" stroke="#54278f" points="321.85,-203.5 331.24,-198.6 320.84,-196.58 321.85,-203.5"/>
+<text xml:space="preserve" text-anchor="middle" x="212.5" y="-239.15" font-family="Helvetica,sans-Serif" font-size="9.00">Admin APIs (restricted)</text>
+</g>
+<!-- db -->
+<g id="node10" class="node">
+<title>db</title>
+<path fill="#a1d99b" stroke="black" d="M155.52,-85C155.52,-89.69 120.66,-93.5 77.76,-93.5 34.85,-93.5 0,-89.69 0,-85 0,-85 0,-8.5 0,-8.5 0,-3.81 34.85,0 77.76,0 120.66,0 155.52,-3.81 155.52,-8.5 155.52,-8.5 155.52,-85 155.52,-85"/>
+<path fill="none" stroke="black" d="M155.52,-85C155.52,-80.31 120.66,-76.5 77.76,-76.5 34.85,-76.5 0,-80.31 0,-85"/>
+<text xml:space="preserve" text-anchor="middle" x="77.76" y="-67.75" font-family="Helvetica,sans-Serif" font-size="10.00">PostgreSQL</text>
+<text xml:space="preserve" text-anchor="middle" x="77.76" y="-55.75" font-family="Helvetica,sans-Serif" font-size="10.00">(Supabase / Render)</text>
+<text xml:space="preserve" text-anchor="middle" x="77.76" y="-43.75" font-family="Helvetica,sans-Serif" font-size="10.00">Users, Students, Recruiters,</text>
+<text xml:space="preserve" text-anchor="middle" x="77.76" y="-31.75" font-family="Helvetica,sans-Serif" font-size="10.00">Companies, Jobs, Applications,</text>
+<text xml:space="preserve" text-anchor="middle" x="77.76" y="-19.75" font-family="Helvetica,sans-Serif" font-size="10.00">Resumes, AI_Results</text>
+</g>
+<!-- admin_web&#45;&gt;db -->
+<g id="edge14" class="edge">
+<title>admin_web-&gt;db</title>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M75.84,-265.51C75.39,-259.6 74.98,-253.18 74.76,-247.25 74.58,-242.46 74.72,-241.25 74.76,-236.45 75.11,-192.36 75.92,-142.48 76.61,-105.08"/>
+<polygon fill="#000000" stroke="#000000" points="80.1,-105.47 76.79,-95.4 73.1,-105.34 80.1,-105.47"/>
+<text xml:space="preserve" text-anchor="middle" x="113.56" y="-187.48" font-family="Helvetica,sans-Serif" font-size="9.00">audit &amp; moderation</text>
+<text xml:space="preserve" text-anchor="middle" x="113.56" y="-176.68" font-family="Helvetica,sans-Serif" font-size="9.00">(approve/remove)</text>
+</g>
+<!-- backend&#45;&gt;admin_web -->
+<g id="edge15" class="edge">
+<title>backend-&gt;admin_web</title>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M332.76,-195.96C228.89,-204.79 103.11,-218.89 85.23,-236.45 80.38,-241.22 77.76,-247.67 76.48,-254.37"/>
+<polygon fill="#000000" stroke="#000000" points="73.02,-253.82 75.57,-264.1 79.99,-254.47 73.02,-253.82"/>
+<text xml:space="preserve" text-anchor="middle" x="111.99" y="-239.15" font-family="Helvetica,sans-Serif" font-size="9.00">admin events</text>
+</g>
+<!-- backend&#45;&gt;db -->
+<g id="edge9" class="edge">
+<title>backend-&gt;db</title>
+<path fill="none" stroke="#31a354" d="M381.96,-158.79C323.55,-142.2 246.95,-118.86 180.76,-93.5 176.06,-91.7 171.26,-89.8 166.44,-87.83"/>
+<polygon fill="#31a354" stroke="#31a354" points="167.83,-84.62 157.25,-84.03 165.15,-91.09 167.83,-84.62"/>
+<text xml:space="preserve" text-anchor="middle" x="322.09" y="-125" font-family="Helvetica,sans-Serif" font-size="9.00">Reads / Writes</text>
+<text xml:space="preserve" text-anchor="middle" x="322.09" y="-114.2" font-family="Helvetica,sans-Serif" font-size="9.00">(ACID data)</text>
+</g>
+<!-- ai -->
+<g id="node11" class="node">
+<title>ai</title>
+<polygon fill="#c7e9c0" stroke="black" points="385.33,-68.75 194.19,-68.75 190.19,-64.75 190.19,-24.75 381.33,-24.75 385.33,-28.75 385.33,-68.75"/>
+<polyline fill="none" stroke="black" points="381.33,-64.75 190.19,-64.75"/>
+<polyline fill="none" stroke="black" points="381.33,-64.75 381.33,-24.75"/>
+<polyline fill="none" stroke="black" points="381.33,-64.75 385.33,-68.75"/>
+<text xml:space="preserve" text-anchor="middle" x="287.76" y="-55.75" font-family="Helvetica,sans-Serif" font-size="10.00">AI Layer (Pluggable)</text>
+<text xml:space="preserve" text-anchor="middle" x="287.76" y="-43.75" font-family="Helvetica,sans-Serif" font-size="10.00">HuggingFace Free / Local Models</text>
+<text xml:space="preserve" text-anchor="middle" x="287.76" y="-31.75" font-family="Helvetica,sans-Serif" font-size="10.00">Resume Rewrite | JD Gen | Cover Letter</text>
+</g>
+<!-- backend&#45;&gt;ai -->
+<g id="edge10" class="edge">
+<title>backend-&gt;ai</title>
+<path fill="none" stroke="#2b8cbe" d="M418.61,-150.7C409.65,-145.03 400.59,-139.04 392.23,-133.1 367.29,-115.37 340.59,-93.51 320.43,-76.34"/>
+<polygon fill="#2b8cbe" stroke="#2b8cbe" points="322.95,-73.9 313.08,-70.05 318.4,-79.21 322.95,-73.9"/>
+<text xml:space="preserve" text-anchor="middle" x="429.49" y="-125" font-family="Helvetica,sans-Serif" font-size="9.00">AI Orchestration</text>
+<text xml:space="preserve" text-anchor="middle" x="429.49" y="-114.2" font-family="Helvetica,sans-Serif" font-size="9.00">(prompts, caching)</text>
+</g>
+<!-- storage -->
+<g id="node12" class="node">
+<title>storage</title>
+<polygon fill="#d9d9d9" stroke="black" points="529.79,-68.75 526.79,-72.75 505.79,-72.75 502.79,-68.75 403.72,-68.75 403.72,-24.75 529.79,-24.75 529.79,-68.75"/>
+<text xml:space="preserve" text-anchor="middle" x="466.76" y="-55.75" font-family="Helvetica,sans-Serif" font-size="10.00">Object Storage</text>
+<text xml:space="preserve" text-anchor="middle" x="466.76" y="-43.75" font-family="Helvetica,sans-Serif" font-size="10.00">(S3 / Supabase Storage)</text>
+<text xml:space="preserve" text-anchor="middle" x="466.76" y="-31.75" font-family="Helvetica,sans-Serif" font-size="10.00">Resumes, Files</text>
+</g>
+<!-- backend&#45;&gt;storage -->
+<g id="edge11" class="edge">
+<title>backend-&gt;storage</title>
+<path fill="none" stroke="#969696" d="M472.82,-150.85C471.56,-129.45 469.93,-101.68 468.68,-80.35"/>
+<polygon fill="#969696" stroke="#969696" points="472.17,-80.23 468.09,-70.45 465.19,-80.64 472.17,-80.23"/>
+<text xml:space="preserve" text-anchor="middle" x="511.73" y="-125" font-family="Helvetica,sans-Serif" font-size="9.00">Upload / Fetch Files</text>
+<text xml:space="preserve" text-anchor="middle" x="511.73" y="-114.2" font-family="Helvetica,sans-Serif" font-size="9.00">(pre-signed URLs)</text>
+</g>
+<!-- search -->
+<g id="node13" class="node">
+<title>search</title>
+<polygon fill="#edf8fb" stroke="black" points="669.56,-68.75 547.96,-68.75 547.96,-24.75 669.56,-24.75 669.56,-68.75"/>
+<text xml:space="preserve" text-anchor="middle" x="608.76" y="-55.75" font-family="Helvetica,sans-Serif" font-size="10.00">Search &amp; Index</text>
+<text xml:space="preserve" text-anchor="middle" x="608.76" y="-43.75" font-family="Helvetica,sans-Serif" font-size="10.00">(ElasticSearch optional)</text>
+<text xml:space="preserve" text-anchor="middle" x="608.76" y="-31.75" font-family="Helvetica,sans-Serif" font-size="10.00">Job &amp; Resume search</text>
+</g>
+<!-- backend&#45;&gt;search -->
+<g id="edge12" class="edge">
+<title>backend-&gt;search</title>
+<path fill="none" stroke="#41b6c4" d="M534.24,-151.06C541.91,-145.59 549.32,-139.56 555.76,-133.1 571.36,-117.45 584.5,-96.38 593.79,-79.09"/>
+<polygon fill="#41b6c4" stroke="#41b6c4" points="596.89,-80.74 598.38,-70.25 590.67,-77.52 596.89,-80.74"/>
+<text xml:space="preserve" text-anchor="middle" x="625.4" y="-119.6" font-family="Helvetica,sans-Serif" font-size="9.00">Indexing / Search Queries</text>
+</g>
+<!-- notif -->
+<g id="node14" class="node">
+<title>notif</title>
+<polygon fill="#f7f7f7" stroke="black" points="864.05,-64.75 687.46,-64.75 687.46,-28.75 864.05,-28.75 864.05,-64.75"/>
+<text xml:space="preserve" text-anchor="middle" x="775.76" y="-49.75" font-family="Helvetica,sans-Serif" font-size="10.00">Notifications</text>
+<text xml:space="preserve" text-anchor="middle" x="775.76" y="-37.75" font-family="Helvetica,sans-Serif" font-size="10.00">(FCM, APNs, Email: SendGrid/SES)</text>
+</g>
+<!-- backend&#45;&gt;notif -->
+<g id="edge13" class="edge">
+<title>backend-&gt;notif</title>
+<path fill="none" stroke="#969696" d="M594.25,-165.17C623.92,-157.72 654.89,-147.39 681.76,-133.1 710.11,-118.02 736.64,-92.47 754.23,-73.24"/>
+<polygon fill="#969696" stroke="#969696" points="756.61,-75.83 760.66,-66.04 751.39,-71.17 756.61,-75.83"/>
+<text xml:space="preserve" text-anchor="middle" x="750.43" y="-119.6" font-family="Helvetica,sans-Serif" font-size="9.00">Send Push / Email</text>
+</g>
+<!-- key1 -->
+<g id="node15" class="node">
+<title>key1</title>
+<polygon fill="lightgrey" stroke="none" points="1063.33,-305.88 996.19,-305.88 996.19,-269.88 1063.33,-269.88 1063.33,-305.88"/>
+<text xml:space="preserve" text-anchor="middle" x="1029.76" y="-284.88" font-family="Helvetica,sans-Serif" font-size="10.00">Client Apps</text>
+</g>
+<!-- key2 -->
+<g id="node16" class="node">
+<title>key2</title>
+<polygon fill="lightgrey" stroke="none" points="1186.5,-305.88 1081.01,-305.88 1081.01,-269.88 1186.5,-269.88 1186.5,-305.88"/>
+<text xml:space="preserve" text-anchor="middle" x="1133.76" y="-284.88" font-family="Helvetica,sans-Serif" font-size="10.00">Backend &amp; Services</text>
+</g>
+</g>
+</svg>

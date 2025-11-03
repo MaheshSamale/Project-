@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="321pt" height="645pt" viewBox="0.00 0.00 321.00 645.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 640.8)">
+<title>StudentFlow</title>
+<polygon fill="#ffffff" stroke="none" points="-4,4 -4,-640.8 316.75,-640.8 316.75,4 -4,4"/>
+<text xml:space="preserve" text-anchor="middle" x="156.38" y="-620.2" font-family="Helvetica,sans-Serif" font-size="14.00">HireWrite — Student (Candidate) User Flow</text>
+<!-- Start -->
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#a6cee3" stroke="black" d="M215.43,-612C215.43,-612 120.7,-612 120.7,-612 114.7,-612 108.7,-606 108.7,-600 108.7,-600 108.7,-588 108.7,-588 108.7,-582 114.7,-576 120.7,-576 120.7,-576 215.43,-576 215.43,-576 221.43,-576 227.43,-582 227.43,-588 227.43,-588 227.43,-600 227.43,-600 227.43,-606 221.43,-612 215.43,-612"/>
+<text xml:space="preserve" text-anchor="middle" x="168.07" y="-590.7" font-family="Helvetica,sans-Serif" font-size="11.00">Start → Login/Signup</text>
+</g>
+<!-- Profile -->
+<g id="node2" class="node">
+<title>Profile</title>
+<path fill="#a6cee3" stroke="black" d="M220.01,-540C220.01,-540 116.12,-540 116.12,-540 110.12,-540 104.12,-534 104.12,-528 104.12,-528 104.12,-516 104.12,-516 104.12,-510 110.12,-504 116.12,-504 116.12,-504 220.01,-504 220.01,-504 226.01,-504 232.01,-510 232.01,-516 232.01,-516 232.01,-528 232.01,-528 232.01,-534 226.01,-540 220.01,-540"/>
+<text xml:space="preserve" text-anchor="middle" x="168.07" y="-525.3" font-family="Helvetica,sans-Serif" font-size="11.00">Create / Update Profile</text>
+<text xml:space="preserve" text-anchor="middle" x="168.07" y="-512.1" font-family="Helvetica,sans-Serif" font-size="11.00">Upload Resume</text>
+</g>
+<!-- Start&#45;&gt;Profile -->
+<g id="edge1" class="edge">
+<title>Start-&gt;Profile</title>
+<path fill="none" stroke="black" d="M168.07,-575.7C168.07,-568.41 168.07,-559.73 168.07,-551.54"/>
+<polygon fill="black" stroke="black" points="171.57,-551.62 168.07,-541.62 164.57,-551.62 171.57,-551.62"/>
+</g>
+<!-- Browse -->
+<g id="node3" class="node">
+<title>Browse</title>
+<path fill="#a6cee3" stroke="black" d="M212.97,-468C212.97,-468 123.16,-468 123.16,-468 117.16,-468 111.16,-462 111.16,-456 111.16,-456 111.16,-444 111.16,-444 111.16,-438 117.16,-432 123.16,-432 123.16,-432 212.97,-432 212.97,-432 218.97,-432 224.97,-438 224.97,-444 224.97,-444 224.97,-456 224.97,-456 224.97,-462 218.97,-468 212.97,-468"/>
+<text xml:space="preserve" text-anchor="middle" x="168.07" y="-453.3" font-family="Helvetica,sans-Serif" font-size="11.00">Browse Jobs</text>
+<text xml:space="preserve" text-anchor="middle" x="168.07" y="-440.1" font-family="Helvetica,sans-Serif" font-size="11.00">(Internal &amp; External)</text>
+</g>
+<!-- Profile&#45;&gt;Browse -->
+<g id="edge2" class="edge">
+<title>Profile-&gt;Browse</title>
+<path fill="none" stroke="black" d="M168.07,-503.7C168.07,-496.41 168.07,-487.73 168.07,-479.54"/>
+<polygon fill="black" stroke="black" points="171.57,-479.62 168.07,-469.62 164.57,-479.62 171.57,-479.62"/>
+</g>
+<!-- ApplyInternal -->
+<g id="node4" class="node">
+<title>ApplyInternal</title>
+<path fill="#a6cee3" stroke="black" d="M171.21,-396C171.21,-396 78.92,-396 78.92,-396 72.92,-396 66.92,-390 66.92,-384 66.92,-384 66.92,-372 66.92,-372 66.92,-366 72.92,-360 78.92,-360 78.92,-360 171.21,-360 171.21,-360 177.21,-360 183.21,-366 183.21,-372 183.21,-372 183.21,-384 183.21,-384 183.21,-390 177.21,-396 171.21,-396"/>
+<text xml:space="preserve" text-anchor="middle" x="125.07" y="-374.7" font-family="Helvetica,sans-Serif" font-size="11.00">Apply to Internal Job</text>
+</g>
+<!-- Browse&#45;&gt;ApplyInternal -->
+<g id="edge3" class="edge">
+<title>Browse-&gt;ApplyInternal</title>
+<path fill="none" stroke="black" d="M157.44,-431.7C152.65,-423.9 146.88,-414.51 141.55,-405.83"/>
+<polygon fill="black" stroke="black" points="144.58,-404.08 136.36,-397.39 138.62,-407.75 144.58,-404.08"/>
+</g>
+<!-- ApplyExternal -->
+<g id="node5" class="node">
+<title>ApplyExternal</title>
+<path fill="#a6cee3" stroke="black" d="M300.75,-324C300.75,-324 177.38,-324 177.38,-324 171.38,-324 165.38,-318 165.38,-312 165.38,-312 165.38,-300 165.38,-300 165.38,-294 171.38,-288 177.38,-288 177.38,-288 300.75,-288 300.75,-288 306.75,-288 312.75,-294 312.75,-300 312.75,-300 312.75,-312 312.75,-312 312.75,-318 306.75,-324 300.75,-324"/>
+<text xml:space="preserve" text-anchor="middle" x="239.07" y="-309.3" font-family="Helvetica,sans-Serif" font-size="11.00">Apply to External Job</text>
+<text xml:space="preserve" text-anchor="middle" x="239.07" y="-296.1" font-family="Helvetica,sans-Serif" font-size="11.00">(Extension asks 'Applied?')</text>
+</g>
+<!-- Browse&#45;&gt;ApplyExternal -->
+<g id="edge8" class="edge">
+<title>Browse-&gt;ApplyExternal</title>
+<path fill="none" stroke="black" d="M176.77,-431.59C188.92,-407.29 211.08,-362.97 225.43,-334.27"/>
+<polygon fill="black" stroke="black" points="228.49,-335.97 229.83,-325.46 222.23,-332.84 228.49,-335.97"/>
+</g>
+<!-- Fitment -->
+<g id="node6" class="node">
+<title>Fitment</title>
+<path fill="#a6cee3" stroke="black" d="M135.02,-324C135.02,-324 61.11,-324 61.11,-324 55.11,-324 49.11,-318 49.11,-312 49.11,-312 49.11,-300 49.11,-300 49.11,-294 55.11,-288 61.11,-288 61.11,-288 135.02,-288 135.02,-288 141.02,-288 147.02,-294 147.02,-300 147.02,-300 147.02,-312 147.02,-312 147.02,-318 141.02,-324 135.02,-324"/>
+<text xml:space="preserve" text-anchor="middle" x="98.07" y="-309.3" font-family="Helvetica,sans-Serif" font-size="11.00">AI Fitment Score</text>
+<text xml:space="preserve" text-anchor="middle" x="98.07" y="-296.1" font-family="Helvetica,sans-Serif" font-size="11.00">(Resume ↔ JD)</text>
+</g>
+<!-- ApplyInternal&#45;&gt;Fitment -->
+<g id="edge4" class="edge">
+<title>ApplyInternal-&gt;Fitment</title>
+<path fill="none" stroke="black" d="M118.39,-359.7C115.48,-352.15 112,-343.12 108.74,-334.68"/>
+<polygon fill="black" stroke="black" points="112.07,-333.59 105.21,-325.52 105.54,-336.11 112.07,-333.59"/>
+</g>
+<!-- ApplicationTrack -->
+<g id="node9" class="node">
+<title>ApplicationTrack</title>
+<path fill="#a6cee3" stroke="black" d="M260.38,-108C260.38,-108 79.75,-108 79.75,-108 73.75,-108 67.75,-102 67.75,-96 67.75,-96 67.75,-84 67.75,-84 67.75,-78 73.75,-72 79.75,-72 79.75,-72 260.38,-72 260.38,-72 266.38,-72 272.38,-78 272.38,-84 272.38,-84 272.38,-96 272.38,-96 272.38,-102 266.38,-108 260.38,-108"/>
+<text xml:space="preserve" text-anchor="middle" x="170.07" y="-93.3" font-family="Helvetica,sans-Serif" font-size="11.00">Track All Applications</text>
+<text xml:space="preserve" text-anchor="middle" x="170.07" y="-80.1" font-family="Helvetica,sans-Serif" font-size="11.00">(Status + Source: App/Web/Extension)</text>
+</g>
+<!-- ApplyExternal&#45;&gt;ApplicationTrack -->
+<g id="edge9" class="edge">
+<title>ApplyExternal-&gt;ApplicationTrack</title>
+<path fill="none" stroke="black" d="M236.9,-287.54C232.77,-257.38 222.29,-193.98 202.07,-144 198.49,-135.17 193.56,-126.11 188.64,-118.03"/>
+<polygon fill="black" stroke="black" points="191.65,-116.24 183.32,-109.69 185.75,-120 191.65,-116.24"/>
+</g>
+<!-- ResumeRec -->
+<g id="node7" class="node">
+<title>ResumeRec</title>
+<path fill="#a6cee3" stroke="black" d="M194.13,-252C194.13,-252 12,-252 12,-252 6,-252 0,-246 0,-240 0,-240 0,-228 0,-228 0,-222 6,-216 12,-216 12,-216 194.13,-216 194.13,-216 200.13,-216 206.13,-222 206.13,-228 206.13,-228 206.13,-240 206.13,-240 206.13,-246 200.13,-252 194.13,-252"/>
+<text xml:space="preserve" text-anchor="middle" x="103.07" y="-230.7" font-family="Helvetica,sans-Serif" font-size="11.00">AI Resume Recommendation / Rewrite</text>
+</g>
+<!-- Fitment&#45;&gt;ResumeRec -->
+<g id="edge5" class="edge">
+<title>Fitment-&gt;ResumeRec</title>
+<path fill="none" stroke="black" d="M99.3,-287.7C99.82,-280.41 100.44,-271.73 101.03,-263.54"/>
+<polygon fill="black" stroke="black" points="104.51,-263.84 101.74,-253.61 97.53,-263.34 104.51,-263.84"/>
+</g>
+<!-- CoverLetter -->
+<g id="node8" class="node">
+<title>CoverLetter</title>
+<path fill="#a6cee3" stroke="black" d="M180.79,-180C180.79,-180 57.34,-180 57.34,-180 51.34,-180 45.34,-174 45.34,-168 45.34,-168 45.34,-156 45.34,-156 45.34,-150 51.34,-144 57.34,-144 57.34,-144 180.79,-144 180.79,-144 186.79,-144 192.79,-150 192.79,-156 192.79,-156 192.79,-168 192.79,-168 192.79,-174 186.79,-180 180.79,-180"/>
+<text xml:space="preserve" text-anchor="middle" x="119.07" y="-158.7" font-family="Helvetica,sans-Serif" font-size="11.00">AI Cover Letter Generation</text>
+</g>
+<!-- ResumeRec&#45;&gt;CoverLetter -->
+<g id="edge6" class="edge">
+<title>ResumeRec-&gt;CoverLetter</title>
+<path fill="none" stroke="black" d="M107.02,-215.7C108.71,-208.32 110.72,-199.52 112.61,-191.25"/>
+<polygon fill="black" stroke="black" points="116,-192.11 114.82,-181.58 109.18,-190.55 116,-192.11"/>
+</g>
+<!-- CoverLetter&#45;&gt;ApplicationTrack -->
+<g id="edge7" class="edge">
+<title>CoverLetter-&gt;ApplicationTrack</title>
+<path fill="none" stroke="black" d="M131.67,-143.7C137.48,-135.73 144.49,-126.1 150.93,-117.26"/>
+<polygon fill="black" stroke="black" points="153.65,-119.47 156.71,-109.33 148,-115.35 153.65,-119.47"/>
+</g>
+<!-- End -->
+<g id="node10" class="node">
+<title>End</title>
+<path fill="#a6cee3" stroke="black" d="M223.85,-36C223.85,-36 116.28,-36 116.28,-36 110.28,-36 104.28,-30 104.28,-24 104.28,-24 104.28,-12 104.28,-12 104.28,-6 110.28,0 116.28,0 116.28,0 223.85,0 223.85,0 229.85,0 235.85,-6 235.85,-12 235.85,-12 235.85,-24 235.85,-24 235.85,-30 229.85,-36 223.85,-36"/>
+<text xml:space="preserve" text-anchor="middle" x="170.07" y="-14.7" font-family="Helvetica,sans-Serif" font-size="11.00">End → Dashboard View</text>
+</g>
+<!-- ApplicationTrack&#45;&gt;End -->
+<g id="edge10" class="edge">
+<title>ApplicationTrack-&gt;End</title>
+<path fill="none" stroke="black" d="M170.07,-71.7C170.07,-64.41 170.07,-55.73 170.07,-47.54"/>
+<polygon fill="black" stroke="black" points="173.57,-47.62 170.07,-37.62 166.57,-47.62 173.57,-47.62"/>
+</g>
+</g>
+</svg>

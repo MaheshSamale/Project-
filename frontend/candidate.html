@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HireWrite | Candidate Portal</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-align: center;
+  }
+  h2 { margin-bottom: 20px; }
+  input { width: 90%; padding: 10px; margin: 8px 0; border: none; border-radius: 8px; outline: none; }
+  button { width: 95%; padding: 10px; margin-top: 10px; border: none; border-radius: 8px; background-color: #fff; color: #2575fc; font-weight: bold; cursor: pointer; transition: 0.3s; }
+  button:hover { background-color: #2575fc; color: #fff; }
+  .toggle { color: #ddd; margin-top: 15px; cursor: pointer; font-size: 14px; }
+  .message { margin-top: 15px; font-size: 14px; }
+  #dashboard { display:none; }
+  #profileForm { display:none; text-align:left; }
+  label { display:block; margin-top:8px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h2 id="formTitle">Candidate Register</h2>
+
+  <!-- Register Form -->
+  <div id="registerForm">
+    <input type="text" id="name" placeholder="Full Name" /><br/>
+    <input type="email" id="email" placeholder="Email" /><br/>
+    <input type="password" id="password" placeholder="Password" /><br/>
+    <input type="text" id="skills" placeholder="Skills (comma separated)" /><br/>
+    <button onclick="registerCandidate()">Register</button>
+  </div>
+
+  <!-- Login Form -->
+  <div id="loginForm" style="display:none;">
+    <input type="email" id="loginEmail" placeholder="Email" /><br/>
+    <input type="password" id="loginPassword" placeholder="Password" /><br/>
+    <button onclick="loginCandidate()">Login</button>
+  </div>
+
+  <!-- Profile Form -->
+  <div id="profileForm">
+    <label>Email:</label>
+    <input type="email" id="email" /><br/>
+    <label>Skills:</label>
+    <input type="text" id="skills" /><br/>
+    <label>Phone:</label>
+    <input type="text" id="phone" /><br/>
+    <label>Education:</label>
+    <input type="text" id="education" /><br/>
+    <label>Experience:</label>
+    <input type="text" id="experience" /><br/>
+    <label>Resume:</label>
+    <input type="file" id="resume" /><br/>
+    <button onclick="saveProfile()">Save / Update Profile</button>
+  </div>
+
+  <!-- Dashboard -->
+  <div id="dashboard">
+    <h2>Welcome, <span id="dashboardName"></span></h2>
+    <p><strong>Email:</strong> <span id="dashboardEmail"></span></p>
+    <p><strong>Skills:</strong> <span id="dashboardSkills"></span></p>
+    <p><strong>Phone:</strong> <span id="dashboardPhone"></span></p>
+    <p><strong>Education:</strong> <span id="dashboardEducation"></span></p>
+    <p><strong>Experience:</strong> <span id="dashboardExperience"></span></p>
+    <button onclick="editProfile()">Edit Profile</button>
+  </div>
+
+  <div class="toggle" onclick="toggleForm()">Already registered? Login</div>
+  <div id="message" class="message"></div>
+</div>
+
+<script>
+let isLogin = false;
+let candidateData = {};
+let loggedCandidateId = null;
+
+function toggleForm() {
+  isLogin = !isLogin;
+  document.getElementById("registerForm").style.display = isLogin ? "none":"block";
+  document.getElementById("loginForm").style.display = isLogin ? "block":"none";
+  document.getElementById("formTitle").innerText = isLogin ? "Candidate Login":"Candidate Register";
+  document.querySelector(".toggle").innerText = isLogin ? "New here? Register":"Already registered? Login";
+  document.getElementById("message").innerText = "";
+}
+
+async function registerCandidate() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const skills = document.getElementById("skills").value;
+  const msg = document.getElementById("message");
+
+  try {
+    const res = await fetch("http://localhost:8080/api/candidate/register", {
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({name,email,password,skills})
+    });
+    if(!res.ok) throw new Error(await res.text());
+    msg.style.color="lightgreen";
+    msg.innerText="✅ Registered successfully! You can now login.";
+    toggleForm();
+  } catch(err) {
+    msg.style.color="salmon";
+    msg.innerText="❌ "+err.message;
+  }
+}
+
+async function loginCandidate() {
+  const email = document.getElementById("loginEmail").value;
+  const password = document.getElementById("loginPassword").value;
+  const msg = document.getElementById("message");
+
+  try {
+    const res = await fetch("http://localhost:8080/api/candidate/login", {
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({email,password})
+    });
+    if(!res.ok) throw new Error(await res.text());
+    candidateData = await res.json();
+    loggedCandidateId = candidateData.id;
+
+    // Pre-fill candidate info
+    document.getElementById("email").value = candidateData.email;
+    document.getElementById("skills").value = candidateData.skills;
+
+    // Get profile info
+    const profileRes = await fetch(`http://localhost:8080/api/candidate/${loggedCandidateId}`);
+    let profile = {};
+    if(profileRes.ok) profile = await profileRes.json();
+
+    if(Object.keys(profile).length>0) {
+      showDashboard(candidateData, profile);
+    } else {
+      document.getElementById("loginForm").style.display="none";
+      document.getElementById("profileForm").style.display="block";
+      document.getElementById("formTitle").innerText="Complete Your Profile";
+    }
+
+  } catch(err) {
+    msg.style.color="salmon";
+    msg.innerText="❌ "+err.message;
+  }
+}
+
+function editProfile() {
+  document.getElementById("dashboard").style.display="none";
+  document.getElementById("profileForm").style.display="block";
+  document.getElementById("formTitle").innerText="Edit Profile";
+
+  document.getElementById("email").value = candidateData.email;
+  document.getElementById("skills").value = candidateData.skills;
+
+  fetch(`http://localhost:8080/api/candidate/${loggedCandidateId}`)
+    .then(res=>res.ok?res.json():{})
+    .then(profile=>{
+      document.getElementById("phone").value = profile.phone||"";
+      document.getElementById("education").value = profile.education||"";
+      document.getElementById("experience").value = profile.experience||"";
+    });
+}
+
+async function saveProfile() {
+  const email = document.getElementById("email").value;
+  const skills = document.getElementById("skills").value;
+  const phone = document.getElementById("phone").value;
+  const education = document.getElementById("education").value;
+  const experience = document.getElementById("experience").value;
+  const resume = document.getElementById("resume").files[0];
+  const msg = document.getElementById("message");
+
+  try {
+    // // Update Candidate email & skills
+    // await fetch(`http://localhost:8080/api/candidate/profile/update/${loggedCandidateId}`,{
+    //   method:"PUT",
+    //   headers:{"Content-Type":"application/json"},
+    //   body: JSON.stringify({email,skills})
+    // });
+
+    // Update / Create Profile
+    const formData = new FormData();
+    formData.append("candidateId", loggedCandidateId);
+    formData.append("phone", phone);
+    formData.append("education", education);
+    formData.append("experience", experience);
+    if(resume) formData.append("resume", resume);
+
+    await fetch("http://localhost:8080/api/candidate/profile/create", {
+      method:"POST",
+      body: formData
+    });
+
+    msg.style.color="lightgreen";
+    msg.innerText="✅ Profile updated successfully!";
+    // Show dashboard
+    showDashboard({id:loggedCandidateId,email,skills,name:candidateData.name},{phone,education,experience});
+  } catch(err) {
+    msg.style.color="salmon";
+    msg.innerText="❌ "+err.message;
+  }
+}
+
+function showDashboard(candidate, profile) {
+  document.getElementById("profileForm").style.display="none";
+  document.getElementById("loginForm").style.display="none";
+  document.getElementById("registerForm").style.display="none";
+  document.getElementById("dashboard").style.display="block";
+
+  document.getElementById("dashboardName").innerText = candidate.name;
+  document.getElementById("dashboardEmail").innerText = candidate.email;
+  document.getElementById("dashboardSkills").innerText = candidate.skills;
+  document.getElementById("dashboardPhone").innerText = profile.phone || "";
+  document.getElementById("dashboardEducation").innerText = profile.education || "";
+  document.getElementById("dashboardExperience").innerText = profile.experience || "";
+}
+</script>
+</body>
+</html>

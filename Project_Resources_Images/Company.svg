@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="299pt" height="573pt" viewBox="0.00 0.00 299.00 573.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 568.8)">
+<title>CompanyFlow</title>
+<polygon fill="#ffffff" stroke="none" points="-4,4 -4,-568.8 294.6,-568.8 294.6,4 -4,4"/>
+<text xml:space="preserve" text-anchor="middle" x="145.3" y="-548.2" font-family="Helvetica,sans-Serif" font-size="14.00">HireWrite — Company (Recruiter) User Flow</text>
+<!-- Start -->
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#b2df8a" stroke="black" d="M192.67,-540C192.67,-540 97.93,-540 97.93,-540 91.93,-540 85.93,-534 85.93,-528 85.93,-528 85.93,-516 85.93,-516 85.93,-510 91.93,-504 97.93,-504 97.93,-504 192.67,-504 192.67,-504 198.67,-504 204.67,-510 204.67,-516 204.67,-516 204.67,-528 204.67,-528 204.67,-534 198.67,-540 192.67,-540"/>
+<text xml:space="preserve" text-anchor="middle" x="145.3" y="-518.7" font-family="Helvetica,sans-Serif" font-size="11.00">Start → Login/Signup</text>
+</g>
+<!-- Team -->
+<g id="node2" class="node">
+<title>Team</title>
+<path fill="#b2df8a" stroke="black" d="M191.12,-468C191.12,-468 99.48,-468 99.48,-468 93.48,-468 87.48,-462 87.48,-456 87.48,-456 87.48,-444 87.48,-444 87.48,-438 93.48,-432 99.48,-432 99.48,-432 191.12,-432 191.12,-432 197.12,-432 203.12,-438 203.12,-444 203.12,-444 203.12,-456 203.12,-456 203.12,-462 197.12,-468 191.12,-468"/>
+<text xml:space="preserve" text-anchor="middle" x="145.3" y="-453.3" font-family="Helvetica,sans-Serif" font-size="11.00">Add Team Members</text>
+<text xml:space="preserve" text-anchor="middle" x="145.3" y="-440.1" font-family="Helvetica,sans-Serif" font-size="11.00">Assign Roles</text>
+</g>
+<!-- Start&#45;&gt;Team -->
+<g id="edge1" class="edge">
+<title>Start-&gt;Team</title>
+<path fill="none" stroke="black" d="M145.3,-503.7C145.3,-496.41 145.3,-487.73 145.3,-479.54"/>
+<polygon fill="black" stroke="black" points="148.8,-479.62 145.3,-469.62 141.8,-479.62 148.8,-479.62"/>
+</g>
+<!-- JD -->
+<g id="node3" class="node">
+<title>JD</title>
+<path fill="#b2df8a" stroke="black" d="M224.75,-396C224.75,-396 65.85,-396 65.85,-396 59.85,-396 53.85,-390 53.85,-384 53.85,-384 53.85,-372 53.85,-372 53.85,-366 59.85,-360 65.85,-360 65.85,-360 224.75,-360 224.75,-360 230.75,-360 236.75,-366 236.75,-372 236.75,-372 236.75,-384 236.75,-384 236.75,-390 230.75,-396 224.75,-396"/>
+<text xml:space="preserve" text-anchor="middle" x="145.3" y="-374.7" font-family="Helvetica,sans-Serif" font-size="11.00">Create / Post Job Description (JD)</text>
+</g>
+<!-- Team&#45;&gt;JD -->
+<g id="edge2" class="edge">
+<title>Team-&gt;JD</title>
+<path fill="none" stroke="black" d="M145.3,-431.7C145.3,-424.41 145.3,-415.73 145.3,-407.54"/>
+<polygon fill="black" stroke="black" points="148.8,-407.62 145.3,-397.62 141.8,-407.62 148.8,-407.62"/>
+</g>
+<!-- Publish -->
+<g id="node4" class="node">
+<title>Publish</title>
+<path fill="#b2df8a" stroke="black" d="M220.78,-324C220.78,-324 69.82,-324 69.82,-324 63.82,-324 57.82,-318 57.82,-312 57.82,-312 57.82,-300 57.82,-300 57.82,-294 63.82,-288 69.82,-288 69.82,-288 220.78,-288 220.78,-288 226.78,-288 232.78,-294 232.78,-300 232.78,-300 232.78,-312 232.78,-312 232.78,-318 226.78,-324 220.78,-324"/>
+<text xml:space="preserve" text-anchor="middle" x="145.3" y="-302.7" font-family="Helvetica,sans-Serif" font-size="11.00">Publish JD → Visible to Students</text>
+</g>
+<!-- JD&#45;&gt;Publish -->
+<g id="edge3" class="edge">
+<title>JD-&gt;Publish</title>
+<path fill="none" stroke="black" d="M145.3,-359.7C145.3,-352.41 145.3,-343.73 145.3,-335.54"/>
+<polygon fill="black" stroke="black" points="148.8,-335.62 145.3,-325.62 141.8,-335.62 148.8,-335.62"/>
+</g>
+<!-- Applications -->
+<g id="node5" class="node">
+<title>Applications</title>
+<path fill="#b2df8a" stroke="black" d="M216.35,-252C216.35,-252 74.25,-252 74.25,-252 68.25,-252 62.25,-246 62.25,-240 62.25,-240 62.25,-228 62.25,-228 62.25,-222 68.25,-216 74.25,-216 74.25,-216 216.35,-216 216.35,-216 222.35,-216 228.35,-222 228.35,-228 228.35,-228 228.35,-240 228.35,-240 228.35,-246 222.35,-252 216.35,-252"/>
+<text xml:space="preserve" text-anchor="middle" x="145.3" y="-237.3" font-family="Helvetica,sans-Serif" font-size="11.00">Receive Applications</text>
+<text xml:space="preserve" text-anchor="middle" x="145.3" y="-224.1" font-family="Helvetica,sans-Serif" font-size="11.00">(Internal + Extension Tracking)</text>
+</g>
+<!-- Publish&#45;&gt;Applications -->
+<g id="edge4" class="edge">
+<title>Publish-&gt;Applications</title>
+<path fill="none" stroke="black" d="M145.3,-287.7C145.3,-280.41 145.3,-271.73 145.3,-263.54"/>
+<polygon fill="black" stroke="black" points="148.8,-263.62 145.3,-253.62 141.8,-263.62 148.8,-263.62"/>
+</g>
+<!-- Shortlist -->
+<g id="node6" class="node">
+<title>Shortlist</title>
+<path fill="#b2df8a" stroke="black" d="M196.62,-180C196.62,-180 93.98,-180 93.98,-180 87.98,-180 81.98,-174 81.98,-168 81.98,-168 81.98,-156 81.98,-156 81.98,-150 87.98,-144 93.98,-144 93.98,-144 196.62,-144 196.62,-144 202.62,-144 208.62,-150 208.62,-156 208.62,-156 208.62,-168 208.62,-168 208.62,-174 202.62,-180 196.62,-180"/>
+<text xml:space="preserve" text-anchor="middle" x="145.3" y="-165.3" font-family="Helvetica,sans-Serif" font-size="11.00">Filter by Fitment Score</text>
+<text xml:space="preserve" text-anchor="middle" x="145.3" y="-152.1" font-family="Helvetica,sans-Serif" font-size="11.00">and Recruiter Criteria</text>
+</g>
+<!-- Applications&#45;&gt;Shortlist -->
+<g id="edge5" class="edge">
+<title>Applications-&gt;Shortlist</title>
+<path fill="none" stroke="black" d="M145.3,-215.7C145.3,-208.41 145.3,-199.73 145.3,-191.54"/>
+<polygon fill="black" stroke="black" points="148.8,-191.62 145.3,-181.62 141.8,-191.62 148.8,-191.62"/>
+</g>
+<!-- Manage -->
+<g id="node7" class="node">
+<title>Manage</title>
+<path fill="#b2df8a" stroke="black" d="M196.01,-108C196.01,-108 94.59,-108 94.59,-108 88.59,-108 82.59,-102 82.59,-96 82.59,-96 82.59,-84 82.59,-84 82.59,-78 88.59,-72 94.59,-72 94.59,-72 196.01,-72 196.01,-72 202.01,-72 208.01,-78 208.01,-84 208.01,-84 208.01,-96 208.01,-96 208.01,-102 202.01,-108 196.01,-108"/>
+<text xml:space="preserve" text-anchor="middle" x="145.3" y="-93.3" font-family="Helvetica,sans-Serif" font-size="11.00">Manage Candidates</text>
+<text xml:space="preserve" text-anchor="middle" x="145.3" y="-80.1" font-family="Helvetica,sans-Serif" font-size="11.00">Shortlist / Reject / Hire</text>
+</g>
+<!-- Shortlist&#45;&gt;Manage -->
+<g id="edge6" class="edge">
+<title>Shortlist-&gt;Manage</title>
+<path fill="none" stroke="black" d="M145.3,-143.7C145.3,-136.41 145.3,-127.73 145.3,-119.54"/>
+<polygon fill="black" stroke="black" points="148.8,-119.62 145.3,-109.62 141.8,-119.62 148.8,-119.62"/>
+</g>
+<!-- End -->
+<g id="node8" class="node">
+<title>End</title>
+<path fill="#b2df8a" stroke="black" d="M209.47,-36C209.47,-36 81.13,-36 81.13,-36 75.13,-36 69.13,-30 69.13,-24 69.13,-24 69.13,-12 69.13,-12 69.13,-6 75.13,0 81.13,0 81.13,0 209.47,0 209.47,0 215.47,0 221.47,-6 221.47,-12 221.47,-12 221.47,-24 221.47,-24 221.47,-30 215.47,-36 209.47,-36"/>
+<text xml:space="preserve" text-anchor="middle" x="145.3" y="-14.7" font-family="Helvetica,sans-Serif" font-size="11.00">End → Recruiter Dashboard</text>
+</g>
+<!-- Manage&#45;&gt;End -->
+<g id="edge7" class="edge">
+<title>Manage-&gt;End</title>
+<path fill="none" stroke="black" d="M145.3,-71.7C145.3,-64.41 145.3,-55.73 145.3,-47.54"/>
+<polygon fill="black" stroke="black" points="148.8,-47.62 145.3,-37.62 141.8,-47.62 148.8,-47.62"/>
+</g>
+</g>
+</svg>
