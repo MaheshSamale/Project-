@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test User API</title>
+</head>
+<body>
+
+<h2>Register Company </h2>
+<form id="registerForm">
+    Email: <input type="email" id="regEmail" required><br>
+    Password: <input type="password" id="regPassword" required><br>
+    Role (student/recruiter/admin): <input type="text" id="regRole" required><br>
+    <button type="submit">Register</button>
+</form>
+<hr>
+
+<h2>Login User</h2>
+<form id="loginForm">
+    Email: <input type="email" id="loginEmail" required><br>
+    Password: <input type="password" id="loginPassword" required><br>
+    <button type="submit">Login</button>
+</form>
+<hr>
+
+<h2>Upload Profile Photo (by Email)</h2>
+<form id="uploadForm" enctype="multipart/form-data">
+    Email: <input type="email" id="uploadEmail" required><br>
+    Photo: <input type="file" id="uploadPhoto" accept="image/*" required><br>
+    <button type="submit">Upload Photo</button>
+</form>
+<hr>
+
+<h2>Get All Users</h2>
+<button id="getAllBtn">Get All Users</button>
+<pre id="output"></pre>
+
+<h2>Update Email</h2>
+<form id="updateEmailForm">
+    Current Email: <input type="email" id="currentEmail" required><br>
+    New Email: <input type="email" id="newEmail" required><br>
+    <button type="submit">Update Email</button>
+</form>
+
+<pre id="output"></pre>
+<hr>
+
+<h2>Change Password</h2>
+<form id="changePassForm">
+    Email: <input type="email" id="passEmail" required><br>
+    Old Password: <input type="password" id="oldPass" required><br>
+    New Password: <input type="password" id="newPass" required><br>
+    <button type="submit">Change Password</button>
+</form>
+<hr>
+
+<h2>Delete User (soft)</h2>
+<form id="deleteForm">
+    Email: <input type="email" id="deleteEmail" required><br>
+    <button type="submit">Delete User</button>
+</form>
+<hr>
+
+<h2>Get User by Email</h2>
+<form id="getUserForm">
+    Email: <input type="email" id="getUserEmail" required><br>
+    <button type="submit">Get User</button>
+</form>
+<hr>
+
+<pre id="output"></pre>
+
+<script>
+const apiBase = 'http://localhost:4000/users';
+// adjust port/path as needed
+
+document.getElementById('registerForm').onsubmit = async e => {
+    e.preventDefault();
+    const email = document.getElementById('regEmail').value;
+    const password = document.getElementById('regPassword').value;
+    const role = document.getElementById('regRole').value;
+
+    const res = await fetch(`${apiBase}/register`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ email, password, role })
+    });
+    const data = await res.json();
+    document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+};
+
+document.getElementById('loginForm').onsubmit = async e => {
+    e.preventDefault();
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+
+    const res = await fetch(`${apiBase}/login`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ email, password })
+    });
+    const data = await res.json();
+    document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+    alert('login success')
+};
+
+document.getElementById('uploadForm').onsubmit = async e => {
+    e.preventDefault();
+    const email = document.getElementById('uploadEmail').value;
+    const photoFile = document.getElementById('uploadPhoto').files[0];
+    if (!photoFile) return alert('Select a photo');
+
+    const formData = new FormData();
+    formData.append('profile_photo', photoFile);
+    formData.append('email', email);  // send email in form data
+
+    const res = await fetch('http://localhost:4000/users/avatar', {
+        method: 'PUT',
+        body: formData
+    });
+    const data = await res.json();
+    document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+};
+
+document.getElementById('getAllBtn').onclick = async () => {
+    const res = await fetch(`${apiBase}`);
+    const data = await res.json();
+    document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+};
+
+
+async function fetchData(url, options) {
+    try {
+        const res = await fetch(url, options);
+        const data = await res.json();
+        document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+    } catch (err) {
+        document.getElementById('output').textContent = String(err);
+    }
+}
+
+document.getElementById('updateEmailForm').onsubmit = async e => {
+    e.preventDefault();
+    const email = document.getElementById('currentEmail').value;
+    const newEmail = document.getElementById('newEmail').value;
+
+    try {
+        const res = await fetch(`${apiBase}/update-email`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, newEmail })
+        });
+        const data = await res.json();
+        document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+    } catch (err) {
+        document.getElementById('output').textContent = 'Error: ' + err.message;
+    }
+};
+
+document.getElementById('changePassForm').onsubmit = e => {
+    e.preventDefault();
+    const body = {
+        email: document.getElementById('passEmail').value,
+        oldPassword: document.getElementById('oldPass').value,
+        newPassword: document.getElementById('newPass').value
+    };
+    fetchData(`${apiBase}/change-password`, {
+        method: 'PUT',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(body)
+    });
+};
+
+document.getElementById('deleteForm').onsubmit = e => {
+    e.preventDefault();
+    const body = {
+        email: document.getElementById('deleteEmail').value
+    };
+    fetchData(`${apiBase}/delete`, {
+        method: 'DELETE',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(body)
+    });
+};
+
+document.getElementById('getUserForm').onsubmit = e => {
+    e.preventDefault();
+    const email = document.getElementById('getUserEmail').value;
+    fetchData(`${apiBase}/${encodeURIComponent(email)}`, {
+        method: 'GET',
+        headers: {'Content-Type': 'application/json'},
+    });
+};
+
+</script>
+
+</body>
+</html>
