@@ -15,10 +15,10 @@ const styles = {
   },
   container: {
     width: '100%',
-    maxWidth: 400,
+    maxWidth: 600,
     padding: 32,
-    backgroundColor: '#1a202c', // dark slate card background
-    borderRadius: 6,
+    backgroundColor: '#1a202c', // dark slate card background 
+    borderRadius: 10,
     boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
   },
   header: {

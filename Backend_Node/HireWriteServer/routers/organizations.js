@@ -43,7 +43,9 @@ router.post('/login',(req,res)=>{
 
         bcrypt.compare(password,data[0].password,(err, success) => {
             if (success) {
+                const token = jwt.sign(payload, congig.SECRET, { expiresIn: '3d' });
                 const org = {
+                    token,
                     name : data[0].name,
                     organization_id : data[0].organization_id,
                     email: data[0].email,

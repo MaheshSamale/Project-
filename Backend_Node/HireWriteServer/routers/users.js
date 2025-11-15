@@ -42,11 +42,11 @@ router.post('/login', (req, res) => {
 
         bcrypt.compare(password, data[0].password, (err, passwordStatus) => {
             if (passwordStatus) {
-                const payload = {
-                    user_id: data[0].user_id,
-                    email: data[0].email,
-                    role: data[0].role
-                };
+                // const payload = {
+                //     user_id: data[0].user_id,
+                //     email: data[0].email,
+                //     role: data[0].role
+                // };
                 const token = jwt.sign(payload, congig.SECRET, { expiresIn: '3d' });
                 const user = {
                     token,
