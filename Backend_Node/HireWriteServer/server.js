@@ -3,7 +3,7 @@ const cors = require('cors')
 
 const userRouter = require('./routers/users')
 const organizationsRouter = require('./routers/organizations')
-
+const candidateRouter = require('./routers/candidate')
 const app = express();
 
 
@@ -12,6 +12,7 @@ app.use(cors())
 app.use(express.json())
 app.use('/users',userRouter)
 app.use('/organizations',organizationsRouter)
+app.use('/candidate',candidateRouter)
 
 app.get('/',(req,res)=>{
     res.send('Hello');
