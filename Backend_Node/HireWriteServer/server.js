@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const authorizeUser = require('./utils/authuser')
 const userRouter = require('./routers/users')
 const organizationsRouter = require('./routers/organizations')
-
+const candidateRouter = require('./routers/candidate')
 const app = express();
 
 
@@ -16,6 +16,7 @@ app.use(express.json())
 app.use(authorizeUser) 
 app.use('/users',userRouter)
 app.use('/organizations',organizationsRouter)
+app.use('/candidate',candidateRouter)
 
 app.get('/',(req,res)=>{
     res.send('Hello');
