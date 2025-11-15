@@ -1,6 +1,5 @@
 // import React, { useState } from 'react';
-// import LoginForm from '../components/LoginForm';
-// import {login} from '../services/authService'
+// import RegisterForm from '../components/RegisterForm';
 
 // const styles = {
 //   pageWrapper: {
@@ -37,12 +36,12 @@
 //   },
 // };
 
-// export default function LoginPage() {
+// export default function RegisterPage() {
 //   const [user, setUser] = useState(null);
 
-//   const handleLoginSuccess = (userData) => {
+//   const handleRegisterSuccess = (userData) => {
 //     setUser(userData);
-    
+//     // You can extend this to redirect or update route here
 //   };
 
 //   return (
@@ -50,12 +49,12 @@
 //       <div style={styles.container}>
 //         {!user ? (
 //           <>
-//             <h1 style={styles.header}>Sign In to HireWrite</h1>
-//             <LoginForm onSubmit={handleLoginSuccess} />
+//             <h1 style={styles.header}> Register to HireWrite</h1>
+//             <RegisterForm onSubmit={handleRegisterSuccess} />
 //           </>
 //         ) : (
 //           <p style={styles.welcomeMsg}>
-//             Welcome back, <strong>{user.email}</strong>!
+//             Welcome, <strong>{user.email}</strong>!
 //           </p>
 //         )}
 //       </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { login } from '../services/authService';
 
 const styles = {
   form: {
@@ -89,7 +90,8 @@ export default function LoginForm({ onSubmit }) {
     setError(null);
     setLoading(true);
     try {
-      await onSubmit(email, password);
+      const result = await login(email, password);
+      window.sessionStorage.setItem('token',result.token)
     } catch (err) {
       setError(err.message || 'Failed to login');
     } finally {
@@ -152,6 +154,7 @@ export default function LoginForm({ onSubmit }) {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         aria-busy={loading}
+        onClick={handleSubmit}
       >
         {loading ? 'Logging in...' : 'Login'}
       </button>

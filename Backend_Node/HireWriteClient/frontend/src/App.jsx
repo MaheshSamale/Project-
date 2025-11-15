@@ -1,26 +1,32 @@
 import { useState } from 'react'
-import LoginPage from './pages/LoginPage'
+// import LoginPage from './pages/LoginPage'
+import RegisterForm from './components/RegisterForm';
+// import LoginForm from './components/LoginForm';
 
 
 function App() {
-  const [user, setUser] = useState(() => {
-    const savedUser = sessionStorage.getItem('user');
-    return savedUser ? JSON.parse(savedUser) : null;
-  });
+  // const [user, setUser] = useState(() => {
+  //   const savedUser = sessionStorage.getItem('user');
+  //   return savedUser ? JSON.parse(savedUser) : null;
+  // });
 
-  if (!user) {
-    return <LoginPage onLoginSuccess={setUser} />;
-  }
+  // if (!user) {
+  //   return <LoginPage onLoginSuccess={setUser} />;
+  // }
 
   return (
-    <div>
-      <h1>Welcome, {user.email}</h1>
-      {/* Render your logged-in app UI */}
-      <button onClick={() => {
-        sessionStorage.clear();
-        setUser(null);
-      }}>Logout</button>
-    </div>
+    <>
+     {/* <LoginForm /> */}
+     <RegisterForm/>
+    </>
+    // <div>
+    //   <h1>Welcome, {user.email}</h1>
+    //   {/* Render your logged-in app UI */}
+    //   <button onClick={() => {
+    //     sessionStorage.clear();
+    //     setUser(null);
+    //   }}>Logout</button>
+    // </div>
   );
 }
 
