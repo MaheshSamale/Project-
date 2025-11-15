@@ -3,6 +3,8 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const multer = require('multer');
 const { v4: uuidv4 } = require('uuid');
+const jwt =require('jsonwebtoken')
+const congig = require('../utils/congig')
 
 const pool = require('../utils/db');
 const result = require('../utils/results');
@@ -38,9 +40,16 @@ router.post('/login', (req, res) => {
         if (err) return res.send(result.createResult(err));
         if (data.length === 0) return res.send(result.createResult('Invalid email'));
 
-        bcrypt.compare(password, data[0].password, (err, success) => {
-            if (success) {
+        bcrypt.compare(password, data[0].password, (err, passwordStatus) => {
+            if (passwordStatus) {
+                const payload = {
+                    user_id: data[0].user_id,
+                    email: data[0].email,
+                    role: data[0].role
+                };
+                const token = jwt.sign(payload, congig.SECRET, { expiresIn: '3d' });
                 const user = {
+                    token,
                     user_id: data[0].user_id,
                     email: data[0].email,
                     role: data[0].role,
@@ -53,6 +62,8 @@ router.post('/login', (req, res) => {
         });
     });
 });
+
+
 
 // Get all users -- ADMIN
 router.get('/', (req, res) => {
