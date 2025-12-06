@@ -5,6 +5,7 @@ const congig = require('./congig')
 function authorizeUser(req, res, next) {
     // For checking the incoming request and the token
     const url = req.url
+    console.log(url)
     if (url == '/users/login' || url == '/users/register') // for these 2 routes no token is required
         next()
     else {

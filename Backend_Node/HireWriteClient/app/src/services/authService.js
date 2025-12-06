@@ -2,7 +2,7 @@ const API_URL = 'http://localhost:4000/users';
 
 // Candidate login
 export async function userCandidateLogin(email, password) {
-  const response = await fetch(`${API_URL}/candidates/login`, {
+  const response = await fetch(`${API_URL}/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, password }),
@@ -15,7 +15,7 @@ export async function userCandidateLogin(email, password) {
 
 // Candidate registration
 export async function userCandidateRegister(name, email, password) {
-  const response = await fetch(`${API_URL}/candidates/register`, {
+  const response = await fetch(`${API_URL}/register`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name, email, password }),

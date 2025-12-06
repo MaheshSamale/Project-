@@ -15,7 +15,6 @@ app.use('/uploads', express.static('uploads'));
 app.use(cors())
 app.use(express.json())
 app.use(authorizeUser) 
-app.use(authorizeOrganization)
 app.use('/users',userRouter)
 app.use('/organizations',organizationsRouter)
 

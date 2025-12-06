@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const multer = require('multer');
 const { v4: uuidv4 } = require('uuid');
 const jwt =require('jsonwebtoken')
-const congig = require('../utils/congig')
+const config = require('../utils/congig')
 
 const pool = require('../utils/db');
 const result = require('../utils/results');
@@ -14,56 +14,118 @@ const saltRounds = 10;
 
 const upload = multer({ dest: 'uploads' });
 
-// Register user
+// // Register user
+// router.post('/register', (req, res) => {
+//     const { email, password, role } = req.body;
+//     if (!email || !password || !role) return res.send(result.createResult('Missing fields'));
+
+//     const user_id = uuidv4();
+
+//     bcrypt.hash(password, saltRounds, (err, hashedPass) => {
+//         if (err) return res.send(result.createResult('Error hashing password'));
+
+//         const sql = `INSERT INTO Users (user_id, email, password, role, is_deleted, created_at, updated_at) VALUES (?, ?, ?, ?, false, NOW(), NOW())`;
+//         pool.query(sql, [user_id, email, hashedPass, role], (err, data) => {
+//             if (err) return res.send(result.createResult(err));
+//             res.send(result.createResult(null, data));
+//         });
+//     });
+// });
+
+// // Login user
+// router.post('/login', (req, res) => {
+//     const { email, password } = req.body;
+//     const sql = `SELECT * FROM Users WHERE email = ? AND is_deleted = false`;
+//     pool.query(sql, [email], (err, data) => {
+//         if (err) return res.send(result.createResult(err));
+//         if (data.length === 0) return res.send(result.createResult('Invalid email'));
+
+//         bcrypt.compare(password, data[0].password, (err, passwordStatus) => {
+//             if (passwordStatus) {
+//                 // const payload = {
+//                 //     user_id: data[0].user_id,
+//                 //     email: data[0].email,
+//                 //     role: data[0].role
+//                 // };
+//                 const token = jwt.sign(payload, congig.SECRET, { expiresIn: '3d' });
+//                 const user = {
+//                     token,
+//                     user_id: data[0].user_id,
+//                     email: data[0].email,
+//                     role: data[0].role,
+//                     profile_photo_url: data[0].profile_photo_url || null
+//                 };
+//                 res.send(result.createResult(null, user));
+//             } else {
+//                 res.send(result.createResult('Invalid password'));
+//             }
+//         });
+//     });
+// });
+
+
+// Helper to generate JWT token
+function generateToken(user) {
+    const payload = { user_id: user.user_id, email: user.email, role: user.role };
+    return jwt.sign(payload, congig.SECRET, { expiresIn: '3d' });
+}
+
+// Candidate Full Registration
 router.post('/register', (req, res) => {
-    const { email, password, role } = req.body;
-    if (!email || !password || !role) return res.send(result.createResult('Missing fields'));
+    const { email, password, name } = req.body;
+    if (!email || !password || !name) return res.send(result.createResult('Missing fields'));
 
-    const user_id = uuidv4();
+    pool.query('SELECT user_id FROM Users WHERE email = ? AND is_deleted = false', [email], (err, data) => {
+        if (err) return res.send(result.createResult(err));
+        if (data.length > 0) return res.send(result.createResult('Email already registered'));
 
-    bcrypt.hash(password, saltRounds, (err, hashedPass) => {
-        if (err) return res.send(result.createResult('Error hashing password'));
+        const user_id = uuidv4();
+        bcrypt.hash(password, saltRounds, (err, hashedPass) => {
+            if (err) return res.send(result.createResult('Error hashing password'));
 
-        const sql = `INSERT INTO Users (user_id, email, password, role, is_deleted, created_at, updated_at) VALUES (?, ?, ?, ?, false, NOW(), NOW())`;
-        pool.query(sql, [user_id, email, hashedPass, role], (err, data) => {
-            if (err) return res.send(result.createResult(err));
-            res.send(result.createResult(null, data));
+            const sqlUser = 'INSERT INTO Users (user_id, email, password, role, is_deleted, created_at, updated_at) VALUES (?, ?, ?, ?, false, NOW(), NOW())';
+            pool.query(sqlUser, [user_id, email, hashedPass, 'student'], (err) => {
+                if (err) return res.send(result.createResult(err));
+
+                const candidate_id = uuidv4();
+                const sqlProfile = 'INSERT INTO CandidateProfiles (candidate_id, user_id, name, is_deleted, created_at, updated_at) VALUES (?, ?, ?, false, NOW(), NOW())';
+                pool.query(sqlProfile, [candidate_id, user_id, name], (err) => {
+                    if (err) return res.send(result.createResult(err));
+
+                    const token = generateToken({ user_id, email, role: 'student' });
+                    res.send(result.createResult(null, { token, user_id, email, role: 'student' }));
+                });
+            });
         });
     });
 });
 
-// Login user
+// Candidate Login
 router.post('/login', (req, res) => {
     const { email, password } = req.body;
-    const sql = `SELECT * FROM Users WHERE email = ? AND is_deleted = false`;
-    pool.query(sql, [email], (err, data) => {
-        if (err) return res.send(result.createResult(err));
-        if (data.length === 0) return res.send(result.createResult('Invalid email'));
+    if (!email || !password) return res.send(result.createResult('Missing fields'));
 
-        bcrypt.compare(password, data[0].password, (err, passwordStatus) => {
-            if (passwordStatus) {
-                // const payload = {
-                //     user_id: data[0].user_id,
-                //     email: data[0].email,
-                //     role: data[0].role
-                // };
-                const token = jwt.sign(payload, congig.SECRET, { expiresIn: '3d' });
-                const user = {
-                    token,
-                    user_id: data[0].user_id,
-                    email: data[0].email,
-                    role: data[0].role,
-                    profile_photo_url: data[0].profile_photo_url || null
-                };
-                res.send(result.createResult(null, user));
-            } else {
-                res.send(result.createResult('Invalid password'));
-            }
+    pool.query('SELECT * FROM Users WHERE email = ? AND role = ? AND is_deleted = false', [email, 'student'], (err, data) => {
+        if (err) return res.send(result.createResult(err));
+        if (data.length === 0) return res.send(result.createResult('Invalid email or password'));
+
+        const user = data[0];
+        bcrypt.compare(password, user.password, (err, matched) => {
+            if (err) return res.send(result.createResult(err));
+            if (!matched) return res.send(result.createResult('Invalid email or password'));
+
+            const token = generateToken(user);
+            const userResponse = {
+                token,
+                user_id: user.user_id,
+                email: user.email,
+                role: user.role,
+                profile_photo_url: user.profile_photo_url || null
+            };
+            res.send(result.createResult(null, userResponse));
         });
     });
 });
-
-
 
 // Get all users -- ADMIN
 router.get('/', (req, res) => {
